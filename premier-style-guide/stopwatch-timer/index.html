@@ -1,0 +1,668 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/element.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+</head>
+<body>
+    <div class="header">
+        <p class="header-nav-text">PL - Time tools Style Guide</p>
+    </div>
+    
+    <div class="container">
+        <p class="titles">Introduction:</p>
+        <p class="body-text">This style guide lists the elements of the stopwatch design for build. Where possible code has been provided to cut down on asset production &amp; for clarity on all displays. Any image assets have been provided alongside this styleguide. When mentioned we have written the styles for the elements inside this document in the css file called element.css for your reference.<br><br>All code examples and elements are given for reference only. These have been written from a design perspective and may not reflect best practises within browser specifications and/or functionality and should be used for reference only.</p>
+        <div class="divider"></div>
+        <p class="titles">General Information:</p>
+        <p class="body-text">All views in both the teacher &amp; pupil views are set to a fixed resolution of 1280px by 720px to accomodate a variety of school displays. The main container should be centered in the browser so if teachers load on a larger display that the content sits neatly within the window.<br><br>Each view is a seperate window/tab which interact with each other dynamically.</p>
+        <div class="divider"></div>
+        <p class="titles">Colour Palette:</p>
+        <p class="body-text">We use 5 colours throughout the interactives with 4 key brand colours. Below are the colour codes and names which will be referenced throughout this document</p>
+        <div class="colour-container">
+            <div class="plpurple"></div>
+            <p class="colour-body">Premier league purple: <br>#37003C</p>
+        </div>
+        <div class="colour-container">
+            <div class="plpink"></div>
+            <p class="colour-body">Premier league pink: <br>#FF005A</p>
+        </div>
+        <div class="colour-container">
+            <div class="plblue"></div>
+            <p class="colour-body">Premier league Blue: <br>#05F0FF</p>
+        </div>
+        <div class="colour-container">
+            <div class="plgreen"></div>
+            <p class="colour-body">Premier league Green: <br>#00FF87</p>
+        </div>
+        <div class="colour-container">
+            <div class="plgrey"></div>
+            <p class="colour-body">Premier league Grey: <br>#00FF87</p>
+        </div>
+        <div class="divider"></div>
+        <p class="titles">Typography:</p>
+        <p class="body-text">We use 3 weights of the Premier League official font and one additional font for the stopwatch numbers, Shown below. We will reference these in this style guide when relevant for sizing and specific weights</p>
+        <p class="prembold">Premier League Bold</p>
+        <p class="body-text">The webfont name of premier league is named PremierLeague-Bold</p>
+        <p class="premreg">Premier League Regular</p>
+        <p class="body-text">The webfont name of premier league is named PremierLeague-Regular</p>
+        <p class="premlight">Premier League Light</p>
+        <p class="body-text">The webfont name of premier league is named PremierLeague-Light</p>
+        <p class="dsdigi">DS Digital</p>
+        <p class="body-text">The webfont name of premier league is named DS-Digital-Bold</p>
+        <div class="divider"></div>
+        <div class="titles">Teacher Views - Setup Screens</div>
+        <p class="body-text">Teacher views on the stopwatch &amp; timer's are designed to give the teacher fine grain control over the system without interupting what the pupils can see on screen. As such the interfaces for the teacher views are much simpler &amp; modular based using repeatable elements aligned centrally in the view.</p>
+        <div class="sub-titles">Structures</div>
+        <p class="body-text">The teacher views are always built upon the same structure framework of <br><br>1)  Header<br>2) title<br>3) description<br>4) control region <br><br>This can be seen below for reference</p>
+        <img class="preview" src="img/structure_example.png">
+        <div class="divider"></div>
+        <div class="sub-titles">Elements - Header</div>
+        <p class="body-text">The header runs full width at a height of 70px with a background-colour of premier league purple<br><br>The header contains the premier league logo right aligned which you can find in the assets pack as "prem-logo.png"<br><br>The header has two states one without a home button and one with. Please reference design files for when this is appropriate.</p>
+        <img class="white_purple" src="img/prem-logo.png">
+        <br><br>
+        <p class="body-text">The header has internal padding of 46px left and right with all elements vertically aligned center inside the header.</p>
+        <p class="sub-section">Type</p>
+        <p class="body-text">The titletext inside the header is set in Premier League Bold at a size of 22px seen below (see header-title in element.css)<br></p>
+        <div class="purple_bg">
+            <p class="header-title">Classroom Time Tools</p>
+        </div>
+        <p class="sub-section">Tools Home Button</p>
+        <p class="body-text"><br>The tools home button is a combination of an icon, text &amp; a divider. We have included the home icon in the assets pack as "home.png", Text is set in Premier League Bold at a size of 18px (seen below as tools-btn-txt in element.css) Users should be able to click anywhere within the home button region left of the divider line to activate the button.</p>
+        <div class="purple_bg">
+            <p class="tools-btn-txt">Tools Home</p>
+        </div>
+        <p class="sub-section">Combined elements</p>
+        <p class="body-text">we have combined the elements into the following final piece below</p>
+        <div class="nav-header">
+            <div class="home-btn-wrapper">
+                <img class="home-icon" src="img/home.png">
+                <p class="tools-btn-txt">Tools Home</p>
+                <p class="vertical-divider"></p>
+            </div>
+            <p class="header-title">Classroom Time Tools</p>
+            <img class="premier-logo" src="img/prem-logo.png">
+        </div>
+        <div class="divider"></div>
+        <div class="sub-titles">Elements - Home Page Launcher</div>
+        <p class="body-text">The home page of the tools contains the header discussed above alongside two launcher regions in order to get to the tool of your choosing. These are built out of the following elements: title; description &amp; the launcher element followed by a button.<br><br>See element.css for references to these sections. Some areas such as buttons are discussed at a later date in this guide. See img's "timer-icon.png" and "stopwatch-icon.png" for the icons used.</p>
+        <div class="launcher-container">
+                <div class="launcher-timer">
+                    <img src="img/timer-icon.png">
+                    <p class="launcher-title">Timer</p>
+                    <p class="launcher-description">Create a timer to run classroom activities</p>
+                    <div class="pink-rect-button">
+                    <p class="btn-text">Go go go!</p>
+                </div>
+                </div>
+                <div class="launcher-stopwatch">
+                    <img src="img/stopwatch-icon.png">
+                    <p class="launcher-title">Stopwatch</p>
+                    <p class="launcher-description">Complete activities against the clock</p>
+                    <div class="pink-rect-button">
+                    <p class="btn-text">Let's do this!</p>
+                </div>
+                </div>
+            </div>
+        <div class="divider"></div>
+        <p class="sub-titles">Elements - Main space</p>
+        <p class="body-text">The main space of the teacher tools area is divided into a title for the screen, a small description sentence/s, The control units, buttons &amp; progress indicators/</p>
+        <p class="sub-section">Title &amp; Descriptors</p>
+        <p class="body-text">The titles are set in "PremierLeague-Light" at a size of 40px (see pagetitle in element.css) in the colour premier league grey<br><br>The descriptor is set in "PremierLeague-Regular" at a size of 22px in premier league grey (see description in element.css)<br><br>The title has a top margin between the header of 30px and a bottom margin of 16px.<br><br>See combined example below.</p>
+        <p class="pagetitle">Welcome to the classroom time tools</p>
+        <p class="description">What tool would you like to use?</p>
+        <br><br>
+        <p class="sub-section">Control areas</p>
+        <p class="body-text">Control areas contain the controls for managing the time settings. In the setup stages it is the case that we have 3 types of controls: timer value controls; reward tools &amp; timer notes.</p>
+        <p class="sub-section">Timer Controls</p>
+        <p class="body-text">Timer controls control what the value of the time is in the timer tool. This is comprised of arrow buttons that increase the time by 1 value and the text region that the user can click into to type the value they want.<br><br>The timer buttons are triangular buttons, these are included in the img pack with two states as "timer-btn-std.png" and "timer-btn-hover.png" When the button is disabled it is set at an opacity of 0.3.<br><br>The top level of the control unit sits with a margin of 50px from the description line. For detailed measurements of the elements please see releveant section in element.css for the included values.<br><br>The timer values are set in "PremierLeague-Bold" at a size of 100px set in premier league purple (see .timer-number in element.css). The center : is "PremierLeague-Light" set at 150px (see .timer-colon in element.css). Time values are flanked underneith by the value type set in "PremierLeague-Light" 32px (see .timer-name in element.css)</p>
+        <p class="sub-section">Reward Controls</p>
+        <p class="body-text">Reward controls enable the reward area of the pupil view. This is made up of a checkbox to enable the dropdown control. And the dropbox box to select the reward type.<br><br>Reward value controls have a title of "PremierLeague-Bold" set in 20px in Premier league Purple<br><br>The dropdown box has a left hand area in the control unit to display a png image which needs to be configured. Seen below these units are in the reward controls section of element.css</p>
+        <div class="reward-control-container">
+            <div class="reward-control-left">
+                <p class="reward-labels">Include a reward?</p>
+            </div>
+            <div class="reward-control-right">
+                <div class="reward-checkbox"></div>
+            </div>
+            <div class="reward-sep"></div>
+            <div class="reward-control-left">
+                <p class="reward-labels">Choose your reward style</p>
+            </div>
+            <div class="reward-control-right">
+                <div class="reward-dropdown">
+                    <p class="dropdown-label">Reward Name</p>
+                </div>
+            </div>
+        </div>
+        <p class="sub-section">Class Notes</p>
+        <p class="body-text">The class notes control unit allows teachers to type in a multiline text field at a locked height. When users are happy they click complete to continue. All elements of this multiline field can be found in the relevant class notes section of element.css</p>
+        <div class="setup-notes-container">
+            <textarea class="setup-notes-field" placeholder="Enter your class notes here"></textarea>
+            </div>
+        <p class="sub-section">Begin Session</p>
+        <p class="body-text">The begin session button elements are simply a big button that takes users through to the next steps and launches the pupil views. This is included in the relevant begin button in the element.css file.</p>
+        <div class="begin-session">
+                <p class="begin-session-txt">Begin Session</p>
+            </div>
+        <p class="sub-section">Buttons</p>
+        <p class="body-text">Throughout the setup screens and further interaction screens we use pink rectangular buttons. These have a hover state and a rounded corner radius of 7px. See below for versions. We have an inactive version of the button with a 0.3 opacity. The text in the button is set in "PremierLeague-Bold" at the size of 20px which is centered in the button vertically and horizontally. see the relevant section in element.css for values. We have included placeholder values and type styles inside the css for this element.</p>
+        <div class="setup-button-container">
+                <div class="pink-rect-button btn-sep">
+                    <p class="btn-text">Quickstart</p>
+                </div>
+                <div class="pink-rect-button faded">
+                    <p class="btn-text">Continue</p>
+                </div>
+            </div>
+        <p class="sub-section">Progress Dots</p>
+        <p class="body-text">Progress dots are used in the setup screens to indicate progress through setup. These can be found in element.css and have three varients. Active (current screen) Complete and inactive</p>
+        <div class="setup-progress">
+                <div class="progress-dot dot-complete"></div>
+                <div class="progress-dot dot-active"></div>
+                <div class="progress-dot dot-inactive"></div>
+                <div class="progress-dot dot-inactive"></div>
+            </div>
+        <p class="sub-section">Sample Screens</p>
+        <p class="body-text">Combining these elements gives us the following setup screens - Follow the element.css file for references to these screens. At this stage it is worth noting that all measurements and builds are purely from a front end design perspective - measurements will need to be checked and adjusted during testing, these css values have not be built from a compatability perspective and as such BLKO will need to rewrite code to reflect our browser compatabilities.</p>
+        <div class="interactive-container">
+            <div class="nav-header">
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Welcome to the classroom time tools</p>
+            <p class="description">What tool would you like to use?</p>
+            <div class="launcher-container">
+                <div class="launcher-timer">
+                    <img src="img/timer-icon.png">
+                    <p class="launcher-title">Timer</p>
+                    <p class="launcher-description">Create a timer to run classroom activities</p>
+                    <div class="pink-rect-button">
+                    <p class="btn-text">Go go go!</p>
+                </div>
+                </div>
+                <div class="launcher-stopwatch">
+                    <img src="img/stopwatch-icon.png">
+                    <p class="launcher-title">Stopwatch</p>
+                    <p class="launcher-description">Complete activities against the clock</p>
+                    <div class="pink-rect-button">
+                    <p class="btn-text">Let's do this!</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="interactive-container">
+            <div class="nav-header">
+                <div class="home-btn-wrapper">
+                    <img class="home-icon" src="img/home.png">
+                    <p class="tools-btn-txt">Tools Home</p>
+                    <p class="vertical-divider"></p>
+                </div>
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Set the time for your timer</p>
+            <p class="description">Use the arrows to set the time<br>
+or click and type in the number fields</p>
+            <div class="timer-container">
+                <div class="timer-left-container">
+                    <div class="timer-control-btn-left"></div>
+                    <p class="timer-number">00</p>
+                    <p class="timer-name">Mins</p>
+                    <div class="timer-control-btn-left flipped faded"></div>
+                </div>
+                <div class="timer-center-container">
+                    <p class="timer-colon">:</p>
+                </div>
+                <div class="timer-right-container">
+                    <div class="timer-control-btn-right"></div>
+                    <p class="timer-number">00</p>
+                    <p class="timer-name">Secs</p>
+                    <div class="timer-control-btn-right flipped faded"></div>
+                </div>                
+            </div>
+            <div class="setup-button-container">
+                <div class="pink-rect-button btn-sep">
+                    <p class="btn-text">Quickstart</p>
+                </div>
+                <div class="pink-rect-button">
+                    <p class="btn-text">Continue</p>
+                </div>
+            </div>
+            <div class="setup-progress">
+                <div class="progress-dot dot-active"></div>
+                <div class="progress-dot dot-inactive"></div>
+                <div class="progress-dot dot-inactive"></div>
+                <div class="progress-dot dot-inactive"></div>
+            </div>
+        </div>
+        <br><br>
+                <div class="interactive-container">
+            <div class="nav-header">
+                <div class="home-btn-wrapper">
+                    <img class="home-icon" src="img/home.png">
+                    <p class="tools-btn-txt">Tools Home</p>
+                    <p class="vertical-divider"></p>
+                </div>
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Choose your reward elements</p>
+            <p class="description">Do you want to include a reward to the timer<br>
+as a visual reward to start and end moments?</p>
+            <div class="reward-control-container">
+                <div class="reward-control-left">
+                    <p class="reward-labels">Include a reward?</p>
+                </div>
+                <div class="reward-control-right">
+                    <div class="reward-checkbox"></div>
+                </div>
+                <div class="reward-sep"></div>
+                <div class="reward-control-left">
+                    <p class="reward-labels">Choose your reward style</p>
+                </div>
+                <div class="reward-control-right">
+                    <div class="reward-dropdown">
+                        <p class="dropdown-label">Reward Name</p>
+                    </div>
+                </div>
+                    
+            </div>
+            <div class="setup-button-container">
+                <div class="pink-rect-button btn-sep">
+                    <p class="btn-text">Back</p>
+                </div>
+                <div class="pink-rect-button">
+                    <p class="btn-text">Continue</p>
+                </div>
+            </div>
+            <div class="setup-progress">
+                <div class="progress-dot dot-complete"></div>
+                <div class="progress-dot dot-active"></div>
+                <div class="progress-dot dot-inactive"></div>
+                <div class="progress-dot dot-inactive"></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="interactive-container">
+            <div class="nav-header">
+                <div class="home-btn-wrapper">
+                    <img class="home-icon" src="img/home.png">
+                    <p class="tools-btn-txt">Tools Home</p>
+                    <p class="vertical-divider"></p>
+                </div>
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Timer Notes</p>
+            <p class="description">Do you want to add any class notes to your timer?<br>
+You can always add and edit these whilst the timer is running</p>
+            <div class="setup-notes-container">
+            <textarea class="setup-notes-field" placeholder="Enter your class notes here"></textarea>
+            </div>
+            <div class="setup-button-container">
+                <div class="pink-rect-button btn-sep">
+                    <p class="btn-text">Back</p>
+                </div>
+                <div class="pink-rect-button">
+                    <p class="btn-text">Continue</p>
+                </div>
+            </div>
+            <div class="setup-progress">
+                <div class="progress-dot dot-complete"></div>
+                <div class="progress-dot dot-complete"></div>
+                <div class="progress-dot dot-active"></div>
+                <div class="progress-dot dot-inactive"></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="interactive-container">
+            <div class="nav-header">
+                <div class="home-btn-wrapper">
+                    <img class="home-icon" src="img/home.png">
+                    <p class="tools-btn-txt">Tools Home</p>
+                    <p class="vertical-divider"></p>
+                </div>
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Timer Ready</p>
+            <p class="description">Your timer setup is complete and your ready to go!<br>
+Click Begin Session to launch the pupil and teacher views</p>
+            <div class="begin-session">
+                <p class="begin-session-txt">Begin Session</p>
+            </div>
+            <div class="setup-button-container btn-centered">
+                <div class="pink-rect-button">
+                    <p class="btn-text">Back</p>
+                </div>
+            </div>
+            <div class="setup-progress">
+                <div class="progress-dot dot-complete"></div>
+                <div class="progress-dot dot-complete"></div>
+                <div class="progress-dot dot-complete"></div>
+                <div class="progress-dot dot-active"></div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="titles">Teacher Views - Timer Function Running</div>
+        <p class="body-text">The teacher view when the timer is running is simple and integrates reusable components between stopwatch and timer similar to the setup screens</p>
+        <div class="sub-titles">Structures</div>
+        <p class="body-text">The standard timer view has a structure of<br><br>1) header<br>2) title<br>3) description<br>4) Time controls unit<br>5)Class Notes<br><br>The no class notes timer view has a structure of<br><br>1) header<br>2) title<br>3) description<br>4) Time controls unit<br><br>This can be seen below for reference</p>
+        <img class="preview" src="img/teacher-timer-view.png">
+        <img class="preview" src="img/teacher-timer-view-no-notes.png">
+        <div class="divider"></div>
+        <p class="sub-section">Class notes included</p>
+        <p class="body-text">When the class notes are included we use a center aligned control unit of the same classnotes module from the setup alongside the timer values from the setup screens (Positioning adjustments applied). Under the timer value is a series of buttons: 1 button for start; 2 buttons for pause, resume &amp; stop; and two or three pink buttons (adjusted widths) at the end.</p>
+        <p class="sub-section">Control Unit - time</p>
+        <p class="body-text">The time control unit is similar to the setup screens with some slight adjustments for positioning of the elements without the up and down arrows. this can be found in timer running styles in element.css</p>
+        <div class="timer-number-container">
+            <div class="timer-running-left">
+                <p class="timer-number">00</p>
+                <p class="timer-name">Mins</p>
+            </div>
+            <div class="timer-running-center">
+                <p class="timer-colon">:</p>
+            </div>
+            <div class="timer-running-right">
+                <p class="timer-number">00</p>
+                <p class="timer-name">Secs</p>
+            </div>
+        </div>
+        <p class="sub-section">Control Unit - Buttons</p>
+        <p class="body-text">The round buttons are set at 120px square with a 120px border radius. These can be seen as timer-start-btn timer-stop-btn timer-pause-btn and timer-resume-btn in element.css</p>
+        <p class="sub-section">Combined Views</p>
+        <p class="body-text">When combined the views look like the below - all elements can be found in the css file element.css. When the class notes are not included because of a quickstart we remove the class notes and center the timer controls. this can be seen in the last of this sections built screens.</p>
+        <div class="interactive-container">
+            <div class="nav-header">
+                <div class="home-btn-wrapper">
+                    <img class="home-icon" src="img/home.png">
+                    <p class="tools-btn-txt">Tools Home</p>
+                    <p class="vertical-divider"></p>
+                </div>
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Timer Running</p>
+            <p class="description">Control the timer with the buttons and edit your notes as you go</p>
+            <div class="timer-running-control-container">
+                <div class="timer-running-container">
+                    <div class="timer-number-container">
+                        <div class="timer-running-left">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Mins</p>
+                        </div>
+                        <div class="timer-running-center">
+                            <p class="timer-colon">:</p>
+                        </div>
+                        <div class="timer-running-right">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Secs</p>
+                        </div>
+                    </div>
+                    <div class="timer-start-btn">
+                        <p class="timer-btn-txt">Start</p>
+                    </div>
+                </div>
+                <div class="timer-running-notes-container">
+                    <textarea class="setup-notes-field" placeholder="Enter your class notes here"></textarea>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="interactive-container">
+            <div class="nav-header">
+                <div class="home-btn-wrapper">
+                    <img class="home-icon" src="img/home.png">
+                    <p class="tools-btn-txt">Tools Home</p>
+                    <p class="vertical-divider"></p>
+                </div>
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Timer Running</p>
+            <p class="description">Control the timer with the buttons and edit your notes as you go</p>
+            <div class="timer-running-control-container">
+                <div class="timer-running-container">
+                    <div class="timer-number-container">
+                        <div class="timer-running-left">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Mins</p>
+                        </div>
+                        <div class="timer-running-center">
+                            <p class="timer-colon">:</p>
+                        </div>
+                        <div class="timer-running-right">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Secs</p>
+                        </div>
+                    </div>
+                    <div class="timer-stop-btn">
+                        <p class="timer-btn-txt">Stop</p>
+                    </div>
+                    <div class="timer-pause-btn">
+                        <p class="timer-btn-txt">Pause</p>
+                    </div>
+                </div>
+                <div class="timer-running-notes-container">
+                    <textarea class="setup-notes-field" placeholder="Enter your class notes here"></textarea>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="interactive-container">
+            <div class="nav-header">
+                <div class="home-btn-wrapper">
+                    <img class="home-icon" src="img/home.png">
+                    <p class="tools-btn-txt">Tools Home</p>
+                    <p class="vertical-divider"></p>
+                </div>
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Timer Running</p>
+            <p class="description">Control the timer with the buttons and edit your notes as you go</p>
+            <div class="timer-running-control-container">
+                <div class="timer-running-container">
+                    <div class="timer-number-container">
+                        <div class="timer-running-left">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Mins</p>
+                        </div>
+                        <div class="timer-running-center">
+                            <p class="timer-colon">:</p>
+                        </div>
+                        <div class="timer-running-right">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Secs</p>
+                        </div>
+                    </div>
+                    <div class="timer-stop-btn">
+                        <p class="timer-btn-txt">Stop</p>
+                    </div>
+                    <div class="timer-resume-btn">
+                        <p class="timer-btn-txt">Resume</p>
+                    </div>
+                </div>
+                <div class="timer-running-notes-container">
+                    <textarea class="setup-notes-field" placeholder="Enter your class notes here"></textarea>
+                </div>
+            </div>
+        </div>
+        <br>
+                <div class="interactive-container">
+            <div class="nav-header">
+                <div class="home-btn-wrapper">
+                    <img class="home-icon" src="img/home.png">
+                    <p class="tools-btn-txt">Tools Home</p>
+                    <p class="vertical-divider"></p>
+                </div>
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Timer Running</p>
+            <p class="description">Control the timer with the buttons and edit your notes as you go</p>
+            <div class="timer-running-control-container">
+                <div class="timer-running-container">
+                    <div class="timer-number-container">
+                        <div class="timer-running-left">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Mins</p>
+                        </div>
+                        <div class="timer-running-center">
+                            <p class="timer-colon">:</p>
+                        </div>
+                        <div class="timer-running-right">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Secs</p>
+                        </div>
+                    </div>
+                    <div class="pink-rect-button-timer">
+                        <p class="btn-text">Restart the timer</p>
+                    </div>
+                    <div class="pink-rect-button-timer">
+                        <p class="btn-text">Setup a new timer</p>
+                    </div>
+                    <div class="pink-rect-button-timer">
+                        <p class="btn-text">Return to tools home</p>
+                    </div>
+                </div>
+                <div class="timer-running-notes-container">
+                    <textarea class="setup-notes-field" placeholder="Enter your class notes here"></textarea>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="interactive-container">
+            <div class="nav-header">
+                <div class="home-btn-wrapper">
+                    <img class="home-icon" src="img/home.png">
+                    <p class="tools-btn-txt">Tools Home</p>
+                    <p class="vertical-divider"></p>
+                </div>
+                <p class="header-title">Classroom Time Tools</p>
+                <img class="premier-logo" src="img/prem-logo.png">
+            </div>
+            <p class="pagetitle">Timer Running</p>
+            <p class="description">Control the timer with the buttons and edit your notes as you go</p>
+            <div class="timer-running-control-container timer-controls-only">
+                <div class="timer-running-container">
+                    <div class="timer-number-container">
+                        <div class="timer-running-left">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Mins</p>
+                        </div>
+                        <div class="timer-running-center">
+                            <p class="timer-colon">:</p>
+                        </div>
+                        <div class="timer-running-right">
+                            <p class="timer-number">00</p>
+                            <p class="timer-name">Secs</p>
+                        </div>
+                    </div>
+                    <div class="timer-stop-btn">
+                        <p class="timer-btn-txt">Stop</p>
+                    </div>
+                    <div class="timer-resume-btn">
+                        <p class="timer-btn-txt">Resume</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="titles">Pupil Views - Timer Function Running</div>
+        <p class="body-text">The pupil views when the timer is running all run on the same format with more richly illustrated assets. found in the img folder of this style guide.</p>
+        <div class="sub-titles">Structures</div>
+        <p class="body-text">The standard pupil view has a structure of<br><br>1) stopwatch area<br>2) media area<br>3) class notes<br><br><br>The quickstart pupil view has a structure of<br><br>1) stopwatch area<br><br>The no media area pupil view has the following structure<br><br>1) Stopwatch area<br>2) class notes<br><br><br>This can be seen below for reference</p>
+        <img class="preview" src="img/pupil-view-standard.png">
+        <img class="preview" src="img/quickstart-pupil-view.png">
+        <img class="preview" src="img/pupil-view-no-media.png">
+        <div class="divider"></div>
+        <p class="sub-section">standard setup - left area</p>
+        <p class="body-text">The left area of the standard setup includes a sml version of the pitch background - this can be found in element.css and the asset pack named "pupil-stopwatch-bg-sml.png"</p>
+        <p class="sub-section">All setups - Stopwatch</p>
+        <p class="body-text">The stopwatch area in the left area is comprised of the stopwatch illustration, a title value and the time values. The title is set in PremierLeague-Bold 28px in Premier League Purple. The time value is set in DS-Digital-Bold at 110px in Premier League Purple. When combined they appear as such.</p>
+        <div class="stopwatch-container">
+            <p class="stopwatch-illus-title">Time Taken</p>
+            <p class="stopwatch-illus-timer">60 : 60</p>
+        </div>
+        <p class="sub-section">Standard Setup - Right area</p>
+        <p class="body-text">The right hand side of the display in the standard setup is comprised of a media area (likely to hold video) and the class notes. In the standard setup the classnotes are smaller in height.</p>
+        <p class="sub-section">Standard Setup - Class notes</p>
+        <p class="body-text">The standard classnotes section has a background image which is named "pupil-notes-bg-sml.png" with the title of the activity notes set in PremierLeague Bold in Premier league Pink at 28px. Under the title is a dividing line set in Premier League Pink at 3px height. Finally the classnotes are set in PremierLeague-Bold at a size of 22px in white. All this is found in element.css</p>
+        <div class="right-side-container">
+                <div class="media-area"></div>
+                <div class="sml-activity-notes-container">
+                    <p class="activity-notes-title">Activity Notes</p>
+                    <div class="activity-notes-divider"></div>
+                    <div class="activity-notes-text">* List all the football tournements you know</div>
+                </div>
+        </div>
+        <div class="clearfix"></div>
+        <p class="sub-section">No reward - Class notes</p>
+        <p class="body-text">If the user chooses no reward elements to be displayed then the classnotes section fits to 100% height with the bg img named "pupil-notes-bg-lrg.png". The classnotes styles are the same as the standard setup just with a larger height on the text region.</p>
+        <div class="right-side-container">
+            <div class="lrg-activity-notes-container">
+                <p class="activity-notes-title">Activity Notes</p>
+                <div class="activity-notes-divider"></div>
+                <div class="activity-notes-text-lrg">* List all the football tournements you know</div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <p class="sub-section">Quickstart - No Rewards or Notes</p>
+        <p class="body-text">If the teacher chooses to quickstart then neither the class notes or the reward media region are displayed. In this case the stopwatch is just centered in the view with a full width background img named "pupil-stopwatch-bg-lrg.png".</p>
+        
+        <p class="sub-section">Animations</p>
+        <p class="body-text">The stopwatch in the pupil view will need some basic animations applied. We use the animation library animate.css documentation is available here https://daneden.github.io/animate.css/ <br><br>The stopwatch element itself should BounceInDown when the modules load, An example of this can be seen <a href="stopwatchload.html" target="_blank">here</a>. When the stopwatch finishes or the teacher clicks stop the watch should perform a tada animation. An example of this can be seen <a href="stopwatchfinish.html" target="_blank">here</a>. When the teacher clicks pause or a half time moment happens the stopwatch should perform a shake animation this can be seen <a href="stopwatchpause.html" target="_blank">here</a> </p>
+        
+        <p class="sub-section">Combined Views</p>
+        <p class="body-text">When combining these elements together you can see the following views take place. See element.css for references.</p>
+        <div class="interactive-container">
+            <div class="stopwatch-area-sml">
+                <div class="stopwatch-container">
+                    <p class="stopwatch-illus-title">Time Taken</p>
+                    <p class="stopwatch-illus-timer">60 : 60</p>
+                </div>
+            </div>
+        <div class="right-side-container">
+            <div class="media-area"></div>
+                <div class="sml-activity-notes-container">
+                <p class="activity-notes-title">Activity Notes</p>
+                <div class="activity-notes-divider"></div>
+                <div class="activity-notes-text">* List all the football tournements you know</div>
+            </div>
+        </div>
+        </div>
+        <br>
+        <div class="interactive-container">
+            <div class="stopwatch-area-full">
+                <div class="stopwatch-container">
+                    <p class="stopwatch-illus-title">Time Taken</p>
+                    <p class="stopwatch-illus-timer">60 : 60</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="interactive-container">
+            <div class="stopwatch-area-sml">
+                <div class="stopwatch-container">
+                    <p class="stopwatch-illus-title">Time Taken</p>
+                    <p class="stopwatch-illus-timer">60 : 60</p>
+                </div>
+            </div>
+            <div class="right-side-container">
+                <div class="lrg-activity-notes-container">
+                    <p class="activity-notes-title">Activity Notes</p>
+                    <div class="activity-notes-divider"></div>
+                    <div class="activity-notes-text-lrg">* List all the football tournements you know</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

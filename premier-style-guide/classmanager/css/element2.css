@@ -1,0 +1,878 @@
+*{padding:0; margin:0;}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #FF005A;
+border-radius: 8px;
+}
+
+.interactive-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1280px;
+    height: 720px;
+    border: 1px black solid;
+    background-image: url(../img/pitch-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Header Styes*/
+
+.nav-header {
+    width: 1200px;
+    height: 54px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    background-color: #37003C; 
+}
+
+.home-btn-wrapper {
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 20px;
+}
+
+.home-icon {
+    display: inline-block;
+    margin-bottom: 14px;
+    margin-right: 17px;
+}
+
+.header-title {
+    display: inline-block;
+    font-family: "PremierLeague-Bold";
+    font-size: 16px;
+    color: white;
+    vertical-align: top;
+    margin-top: 18px;
+}
+
+.tools-btn-txt {
+    display: inline-block;
+    font-family: "PremierLeague-Bold";
+    font-size: 16px;
+    color: white;
+    margin-top: 18px;
+    margin-right: 22px;
+    vertical-align: top;
+}
+
+.vertical-divider {
+    display: inline-block;
+    height: 54px;
+    width: 2px;
+    background-color: white;
+}
+
+.premier-logo {
+    display: inline-block;
+    float: right;
+    margin-top: 12px;
+}
+
+/*Header Styles*/
+
+/*container styles*/
+
+.intro-container {
+    width: 746px;
+    height: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 140px;
+}
+
+.content-container {
+    display: inline-block;
+    width: 49.8%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    vertical-align: top;
+}
+
+.internal-container-left {
+    width: 600px;
+    margin-left: 45px;
+    margin-right: 0px;
+    padding-right: 0px;
+    margin-top: 22px;
+    min-height: 200px;
+/*    border: 1px solid red;*/
+}
+
+.internal-container-right {
+    width: 600px;
+    margin-left: 17px;
+    margin-right: 0px;
+    padding-right: 0px;
+/*    margin-top: 22px;*/
+    min-height: 200px;
+/*    border: 1px solid red;*/
+}
+
+.objectives-container {
+    width: 582px;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 14px;
+    margin-bottom: 16px;
+}
+
+.learning-objective {
+    width: 594px;
+    margin-bottom: 24px;
+}
+
+.scroll-bar {
+    display: inline-block;
+    width: 8px;
+    height: 45px;
+    background-color: #37003C;
+    border-radius: 5em;
+}
+
+.score-container {
+    display: block;
+    width: 270px;
+    height: 79px;
+    background-image: url(../img/score-container.png);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 47px;
+    text-align: center;
+}
+
+.resource-container {
+    width: 982px;
+    height: 621px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.learning-outcomes-pack-container {
+    height: 348px;
+    width: 912px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 34px;
+}
+
+.addspace {
+    margin-bottom: 14px;
+}
+
+.congratulations-container {
+    position: absolute;
+    width: 1146px;
+    height: 650px;
+    z-index: 10;
+    margin-left: 67px;
+    margin-top: 45px;
+}
+
+/*container styles*/
+
+/*intro styles*/
+
+.intro-top {
+    width: 746px;
+    height: 113px;
+    background-image: url(../img/intro-top-bg.png);
+    background-repeat: no-repeat;
+}
+
+.intro-bottom {
+    width: 746px;
+    height: 220px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+
+}
+
+/*intro styles*/
+
+
+/*resource styles*/
+
+.resource-overlay {
+    position: absolute;
+    width: 1280px;
+    height: 668px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    
+}
+
+.resource-top {
+    width: 980px;
+    height: 113px;
+    background-image: url(../img/resource-top-bg.png);
+    background-repeat: no-repeat;
+}
+
+.resource-bottom {
+    width: 980px;
+    height: 473px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    padding-top: 35px;
+
+}
+
+.learning-outcome-pack {
+    width: 894px;
+    height: 50px;
+    background-color: #37003C;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-bottom: 6px;
+}
+
+.expanded-outcome-list {
+    width: 820px;
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -6px;
+    margin-bottom: 6px;
+    border-left: 3px solid #E8E8E8;
+    border-right: 3px solid #E8E8E8;
+    border-bottom: 3px solid #E8E8E8;
+    border-radius: 0 0 10px 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+/*resource styles*/
+
+/*congrats styles*/
+
+.congrats-top {
+    width: 1146px;
+    height: 142px;
+    background-image: url(../img/congrats-top-bg.png)
+}
+
+.congrats-bottom {
+    width: 1058px;
+    height: 474px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    padding-top: 34px;
+    padding-left: 44px;
+    padding-right: 44px;
+}
+
+.congrats-left {
+    display: inline-block;
+    width: 470px;
+    height: 440px;
+    margin-right: 60px;
+}
+
+.congrats-right {
+    display: inline-block;
+    width: 470px;
+    height: 440px;
+    margin-left: 47px;
+    vertical-align: top;
+}
+
+.congrats-center {
+    display: inline-block;
+    vertical-align: top;
+    height: 440px;
+    width: 2px;
+    background-color: #FF005A;
+}
+
+.congrats-video {
+    width: 470px;
+    height: 264px;
+    border-radius: 6px;
+    background-color: black;
+}
+
+.video-wrapper {
+    display:table;
+    width:auto;
+    position:relative;
+    width:470px;
+    margin-bottom: 18px;
+}
+
+.playpause {
+    background-image:url(../img/playpause.png);
+    background-repeat:no-repeat;
+    width: 470px;
+    height: 264px;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
+}
+
+.learnt-objectives {
+    width: 460px;
+    font-family: PremierLeague-Regular;
+    font-size: 18px;
+    color: #37003C;
+    line-height: 2;
+    word-wrap:break-word;
+}
+
+.learnt-objectives-container {
+    width: 100%;
+    height: 398px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*congrats styles*/
+
+
+/*text styles*/
+
+.title {
+    font-family: "PremierLeague-Bold";
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.objectives {
+    font-family: "PremierLeague-Regular";
+    font-size: 17px;
+    color: #37003C;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    line-height: 22px;
+    margin: 0px;
+}
+
+.timeentered {
+    padding-top: 7px;
+    font-family: "PremierLeague-Bold";
+    font-size: 28px;
+    color: #37003C;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.timemins {
+    font-size: 15px;
+}
+
+.btn-text {
+    padding-top: 12px;
+    font-family: "PremierLeague-Bold";
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.score-value {
+    font-family: "PremierLeague-Bold";
+    font-size: 30px;
+    color: #FFFFFF;
+    padding-top: 9px;
+}
+
+.score-number {
+    font-family: "PremierLeague-Bold";
+    font-size: 54px;
+    color: #FFFFFF;
+    vertical-align: middle;
+    padding-left: 16px;
+}
+
+.intro-title {
+    font-family: "PremierLeague-Bold";
+    font-size: 36px;
+    color: #FFFFFF;
+    letter-spacing: 0.12px;
+    margin-left: 44px;
+    padding-top: 16px;
+}
+
+.intro-body {
+    font-family: "PremierLeague-Regular";
+    font-size: 20px;
+    color: #37003C;
+    line-height: 26px;
+    margin-left: 44px;
+    margin-right: 44px;
+    padding-top: 30px;
+}
+
+.resource-title {
+    font-family: "PremierLeague-Bold";
+    font-size: 36px;
+    color: #FFFFFF;
+    letter-spacing: 0.12px;
+    margin-left: 44px;
+    padding-top: 34px;
+}
+
+.resource-pack-title {
+    display: inline-block;
+    vertical-align: -8px;
+    font-family: "PremierLeague-Bold";
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.resource-item {
+    display: inline-block;
+    font-family: "PremierLeague-Regular";
+    font-size: 16px;
+    color: #37003C;
+    vertical-align: middle;
+}
+
+.congrats-title {
+    font-family: "PremierLeague-Bold";
+    font-size: 36px;
+    color: #FFFFFF;
+    letter-spacing: 0.12px;
+    margin-left: 44px;
+    padding-top: 60px;
+}
+
+.congrats-body {
+    font-family: "PremierLeague-Regular";
+    font-size: 20px;
+    color: #37003C;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.you-learnt {
+    font-family: "PremierLeague-Bold";
+    font-size: 22px;
+    color: #FF005A;
+    margin-bottom: 14px;
+}
+
+.confirmation-title {
+    font-family: "PremierLeague-Bold";
+    font-size: 38px;
+    color: #FFFFFF;
+    letter-spacing: 0.09px;
+    margin-bottom: 40px;
+    line-height: 47px;
+}
+
+.confirmation-body {
+    font-family: "PremierLeague-Regular";
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0.07px;
+    line-height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 46px;
+}
+
+.confirm-sml {
+    width: 394px;
+}
+
+.confirm-lrg {
+    width: 504px;
+}
+
+
+/*text styles*/
+
+/*text holder styles*/
+
+.message-day {
+    width: 567px;
+    min-height: 50px;
+    margin-top: 12px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.message-day-empty {
+    width: 567px;
+    min-height: 50px;
+    margin-top: 12px;
+    background: rgba(255,255,255,0.60);
+    box-shadow: inset 0 0 0 2px #37003C;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+/*text holder styles*/
+
+/*objective styles*/
+
+.ball-inactive {
+    display: inline-block;
+    width: 51px;
+    height: 51px;
+    background-image: url(../img/ball-inactive.png);
+    margin-right: 20px;
+}
+
+
+.ball-active {
+    display: inline-block;
+    width: 51px;
+    height: 51px;
+    background-image: url(../img/ball-active.png);
+    margin-right: 20px;
+}
+
+
+
+.objective-inactive {
+    display: inline-block;
+    width: 496px;
+    min-height: 50px;
+    background: rgba(255,255,255,0.60);
+    box-shadow: inset 0 0 0 2px #37003C;
+    border-radius: 10px 10px 10px 0;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.time-inactive {
+    display: inline-block;
+    width: 124px;
+    height: 50px;
+    margin-left: 71px;
+    margin-top: -7px;
+    background: rgba(255,255,255,0.60);
+    box-shadow: inset 0 0 0 2px #37003C;
+    border-radius: 0 0 10px 10px;
+}
+
+.objective-active {
+    display: inline-block;
+    width: 496px;
+    min-height: 50px;
+    background-color: white;
+    border-radius: 10px 10px 10px 0;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.time-active {
+    display: inline-block;
+    width: 124px;
+    height: 50px;
+    margin-left: 71px;
+    margin-top: -7px;
+    background: #FFFFFF;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    border-radius: 0 0 10px 10px;
+}
+
+/*objective styles*/
+
+
+/*buttons*/
+
+.add-btn-inactive {
+    display: inline-block;
+    width: 80px;
+    height: 37px;
+    margin-left: 18px;
+    vertical-align: top;
+    background-image: url(../img/add-inactive.png);
+}
+
+.add-btn-active {
+    display: inline-block;
+    width: 80px;
+    height: 37px;
+    margin-left: 18px;
+    vertical-align: top;
+    background-image: url(../img/add-active.png);
+}
+
+.edit-btn {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: top;
+    margin-left: 18px;
+    background-image: url(../img/edit-btn.png);
+}
+
+.finish-edit-btn {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: top;
+    margin-left: 18px;
+    background-image: url(../img/finish-edit-btn.png);
+}
+
+.delete-btn {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: top;
+    margin-left: 12px;
+    background-image: url(../img/delete-btn.png);
+}
+
+.complete-btn {
+    display: inline-block;
+    width: 117px;
+    height: 36px;
+    vertical-align: top;
+    margin-left: 12px;
+    background-image: url(../img/complete-btn.png);
+}
+
+.move-back-btn {
+    display: inline-block;
+    width: 128px;
+    height: 36px;
+    vertical-align: top;
+    margin-left: 18px;
+    background-image: url(../img/move-back-btn.png);
+}
+
+.start-btn {
+    width: 296px;
+    text-align: center;
+    height: 50px;
+    background: #FF005A;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.start-btn:hover {
+    background: #CB0249;
+}
+
+.load-btn {
+    width: 296px;
+    text-align: center;
+    height: 50px;
+    background: #FF005A;
+    border-radius: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.load-btn:hover {
+    background: #CB0249;
+}
+
+.reset-btn {
+    display: inline-block;
+    width: 245px;
+    text-align: center;
+    height: 50px;
+    background: #FF005A;
+    border-radius: 7px;
+    margin-right: 77px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.reset-btn:hover {
+    background: #CB0249;
+}
+
+.inactive {
+    opacity: 0.3;
+}
+
+.fulltime-btn {
+    display: inline-block;
+    width: 245px;
+    text-align: center;
+    height: 50px;
+    background: #FF005A;
+    border-radius: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.fulltime-btn:hover {
+    background: #CB0249;
+}
+
+.expand-btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25px;
+    margin-top: 9px;
+    margin-right: 26px;
+}
+
+.cancel-btn {
+    display: inline-block;
+    width: 159px;
+    height: 50px;
+    background: #FF005A;
+    border-radius: 7px;
+    margin-left: 40px;
+    text-align: center;
+    margin-right: 35px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.cancel-btn:hover {
+    background: #CB0249;
+}
+
+.add-selected-btn {
+    display: inline-block;
+    width: 282px;
+    height: 50px;
+    background: #FF005A;
+    border-radius: 7px;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.add-selected-btn:hover {
+    background: #CB0249;
+}
+
+.objective-unselected {
+    display: inline-block;
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    background-image: url(../img/objective-select-ring.png);
+}
+
+.objective-selected {
+    display: inline-block;
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    background-image: url(../img/objective-selected-ring.png);
+}
+
+.congrats-reset-btn {
+    display: inline-block;
+    height: 50px;
+    width: 206px;
+    background: #FF005A;
+    border-radius: 7px;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.congrats-reset-btn:hover {
+    background: #CB0249;
+}
+
+.resetbtnsmargin {
+    margin-right: 58px;
+}
+
+.confirm-btn {
+    display: inline-block;
+    height: 50px;
+    width: 296px;
+    background: #FF005A;
+    border-radius: 7px;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.confirm-btn:hover {
+    background: #CB0249;
+}
+
+.confirm-btn:nth-child(1) {
+    margin-bottom: 26px;
+}
+
+
+/*Confirmation styles*/
+
+.overlay {
+    position: absolute;
+    z-index: 20;
+    width: 1280px;
+    height: 667px;
+    background-color: rgba(55,0,60,0.8);
+}
+
+.confirmation-container {
+    width: 506px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 102px;
+    text-align: center;
+}
+    
+/*Confirmation styles*/
+

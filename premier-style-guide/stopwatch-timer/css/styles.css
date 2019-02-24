@@ -1,0 +1,240 @@
+/*WEBFONTS*/
+
+@font-face {
+	font-family: 'PremierLeague-Bold';
+	src: url('../fonts/PremierLeague-Bold.eot');
+	src: url('../fonts/PremierLeague-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PremierLeague-Bold.woff2') format('woff2'),
+		url('../fonts/PremierLeague-Bold.woff') format('woff'),
+		url('../fonts/PremierLeague-Bold.ttf') format('truetype'),
+		url('../fonts/PremierLeague-Bold.svg#PremierLeague-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PremierLeague-Regular';
+	src: url('../fonts/PremierLeague-Regular.eot');
+	src: url('../fonts/PremierLeague-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PremierLeague-Regular.woff2') format('woff2'),
+		url('../fonts/PremierLeague-Regular.woff') format('woff'),
+		url('../fonts/PremierLeague-Regular.ttf') format('truetype'),
+		url('../fonts/PremierLeague-Regular.svg#PremierLeague-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DS-Digital-Bold';
+	src: url('../fonts/DS-Digital-Bold.eot');
+	src: url('../fonts/DS-Digital-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DS-Digital-Bold.woff2') format('woff2'),
+		url('../fonts/DS-Digital-Bold.woff') format('woff'),
+		url('../fonts/DS-Digital-Bold.ttf') format('truetype'),
+		url('../fonts/DS-Digital-Bold.svg#DS-Digital-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PremierLeague-Light';
+	src: url('../fonts/PremierLeague-Light.eot');
+	src: url('../fonts/PremierLeague-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PremierLeague-Light.woff2') format('woff2'),
+		url('../fonts/PremierLeague-Light.woff') format('woff'),
+		url('../fonts/PremierLeague-Light.ttf') format('truetype'),
+		url('../fonts/PremierLeague-Light.svg#PremierLeague-Light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*WEBFONTS*/
+
+body {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #37003C;
+    height: 45px;
+    z-index: 100;
+}
+
+.header-nav-text {
+    font-family: "PremierLeague-Bold";
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.container {
+    max-width: 1290px;
+    margin-left: 30px;
+    margin-top: 80px;
+    padding: 0px;
+    margin-right: 30px;
+}
+
+.divider {
+    height: 50px;
+}
+
+.imgscale {
+    
+}
+
+.preview {
+    max-width: 100%;
+    height: auto;
+    border: 2px black solid;
+}
+
+.white_purple {
+    max-width: 100%;
+    height: auto;
+    background-color: #37003C;
+}
+
+.purple_bg {
+    min-width: 100px;
+    max-width: 300px;
+    height: auto;
+    padding: 15px;
+    background-color: #37003C;
+}
+
+.body-text {
+    max-width: 900px;
+    font-family: "PremierLeague-Regular";
+    font-size: 16px;
+    color: #252525;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.titles {
+    font-family: "PremierLeague-Bold";
+    font-size: 28px;
+    color: #37003C;
+    margin-bottom: 30px;
+}
+
+.sub-titles {
+    font-family: "PremierLeague-Bold";
+    font-size: 22px;
+    color: #37003C;
+    margin-bottom: 30px;
+}
+
+.sub-section {
+    font-family: "PremierLeague-Bold";
+    font-size: 16px;
+    color: #37003C;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.prembold {
+    font-family: "PremierLeague-bold";
+    font-size: 30px;
+    color: #252525;
+    margin-bottom: 5px;
+}
+
+.premreg {
+    font-family: "PremierLeague-Regular";
+    font-size: 30px;
+    color: #252525;
+    margin-bottom: 5px;
+}
+
+.premlight {
+    font-family: "PremierLeague-Light";
+    font-size: 30px;
+    color: #252525;
+    margin-bottom: 5px;
+}
+
+.dsdigi {
+    font-family: "DS-Digital-Bold";
+    font-size: 40px;
+    color: #252525;
+    margin-bottom: 5px;
+}
+
+.colour-container {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.plpurple {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #37003C;
+    margin-right: 15px;
+}
+
+.plpink {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #FF005A;
+    margin-right: 15px;
+}
+
+.plblue {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #05F0FF;
+    margin-right: 15px;
+}
+
+.plgreen {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #00FF87;
+    margin-right: 15px;
+}
+
+.plgrey {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #252525;
+    margin-right: 15px;
+}
+
+.colour-body {
+    display: inline-block;
+    max-width: 900px;
+    font-family: "PremierLeague-Regular";
+    font-size: 16px;
+    color: #252525;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    vertical-align: top;
+    margin-right: 30px;
+}
+
+.clearfix{
+    clear:both;
+}
+

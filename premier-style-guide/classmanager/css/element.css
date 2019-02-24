@@ -1,0 +1,765 @@
+.interactive-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1280px;
+    height: 720px;
+    border: 1px black solid;
+}
+
+/*Header Styes*/
+
+.nav-header {
+    width: 1280px;
+    height: 54px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    background-color: #37003C; 
+}
+
+.home-btn-wrapper {
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 20px;
+}
+
+.home-icon {
+    display: inline-block;
+    margin-bottom: 14px;
+    margin-right: 17px;
+}
+
+.header-title {
+    display: inline-block;
+    font-family: "PremierLeague-Bold";
+    font-size: 16px;
+    color: white;
+    vertical-align: top;
+    margin-top: 18px;
+}
+
+.tools-btn-txt {
+    display: inline-block;
+    font-family: "PremierLeague-Bold";
+    font-size: 16px;
+    color: white;
+    margin-top: 18px;
+    margin-right: 22px;
+    vertical-align: top;
+}
+
+.vertical-divider {
+    display: inline-block;
+    height: 54px;
+    width: 2px;
+    background-color: white;
+}
+
+.premier-logo {
+    display: inline-block;
+    float: right;
+    margin-top: 12px;
+}
+
+/*Header Styles*/
+
+/*Launcher Styles*/
+
+.launcher-container {
+    width: 770px;
+    height: 362px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 95px;
+}
+
+.launcher-stopwatch {
+    display: inline-block;
+    width: 296px;
+    height: 50px;
+    float: right;
+    text-align: center;
+}
+
+.launcher-timer {
+    display: inline-block;
+    width: 296px;
+    float: left;
+    text-align: center;
+}
+
+.launcher-title {
+    font-family: "PremierLeague-Bold";
+    font-size: 20px;
+    color: #252525;
+    margin-top: 26px;
+    margin-bottom: 12px;
+}
+.launcher-description {
+    font-family: "PremierLeague-Regular";
+    font-size: 15px;
+    color: #252525;
+    margin-bottom: 48px;
+}
+
+/*Launcher Styles*/
+
+/*Main space styles*/
+
+.pagetitle {
+    font-family: "PremierLeague-Light";
+    font-size: 40px;
+    color: #252525;
+    margin-top: 30px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.description {
+    font-family: "PremierLeague-Regular";
+    font-size: 22px;
+    color: #252525;
+    text-align: center;
+}
+
+
+/*Timer controls*/
+
+.timer-container {
+    width: 310px;
+    height: 260px;
+    margin-top: 50px;
+/*    border: 1px solid black;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 58px;
+}
+
+.timer-left-container {
+    display: inline-block;
+    width: 110px;
+    vertical-align: top;
+}
+
+
+.timer-right-container {
+    display: inline-block;
+    width: 110px;
+    vertical-align: top;
+}
+
+.timer-center-container {
+    display: inline-block;
+    width:77px;
+    vertical-align: top;
+    
+}
+
+.timer-control-btn-left {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 34px;
+    margin-bottom: 10px;
+    background-image: url(../img/timer-btn-std.png);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.timer-control-btn-left:hover {
+    background-image: url(../img/timer-btn-hover.png);
+}
+
+.timer-control-btn-right {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 34px;
+    margin-bottom: 10px;
+    background-image: url(../img/timer-btn-std.png);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.timer-control-btn-right:hover {
+    background-image: url(../img/timer-btn-hover.png);
+}
+
+.flipped {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+}
+
+.faded {
+    opacity: 0.3;
+}
+
+
+.timer-number {
+    font-family: "PremierLeague-Bold";
+    font-size: 100px;
+    color: #37003C;
+    letter-spacing: 0.07px;
+    text-align: center;
+}
+
+.timer-colon {
+    font-family: "PremierLeague-Light";
+    font-size: 150px;
+    color: #37003C;
+    text-align: center;
+}
+
+.timer-name {
+    font-family: "PremierLeague-Light";
+    font-size: 32px;
+    color: #252525;
+    letter-spacing: 0.07px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+/*Timer controls*/
+
+/*Reward Controls*/
+
+.reward-control-container {
+    width: 616px;
+    height: 172px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: 125px;
+}
+
+.reward-control-left {
+    display: inline-block;
+    width: 258px;
+    margin-right: 55px;
+    margin-top: 12px;
+    vertical-align: top;
+}
+
+.reward-control-right {
+    display: inline-block;
+}
+
+.reward-sep {
+    height: 80px;
+}
+
+
+.reward-labels {
+    font-family: "PremierLeague-Bold";
+    font-size: 20px;
+    color: #37003C;
+    letter-spacing: 0.09px;
+}
+
+.reward-checkbox {
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/checkbox.png);
+}
+
+.reward-dropdown {
+    width: 298px;
+    height: 44px;
+    background-image: url(../img/dropdown-container.png);
+}
+
+.dropdown-label {
+    padding-top: 12px;
+    padding-left: 76px;
+    font-family: "PremierLeague-Bold";
+    font-size: 18px;
+    color: #37003C;
+    letter-spacing: 0.09px;
+}
+
+/*Reward Controls*/
+
+
+/*Class Notes*/
+
+.setup-notes-container {
+    width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.setup-notes-field {
+    width: 510px;
+    height: 306px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border: 3px solid #FF005A;
+    border-radius: 7px;
+    background-color: white;
+    font-size: 18px;
+    font-family: "PremierLeague-Regular";
+    color: #37003C;
+    resize: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.setup-notes-field:focus {
+    border: 3px solid #37003C;
+    outline: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+/*Class Notes*/
+
+/*Begin Session*/
+
+.begin-session {
+    width: 225px;
+    height: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 94px;
+    background-color: #00FF87;
+    border-radius: 225px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.begin-session:hover {
+    background-color: #03E97D;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+
+}
+
+.begin-session-txt {
+    width: 120px;
+    font-family: PremierLeague-Bold;
+    font-size: 32px;
+    color: #37003C;
+    letter-spacing: 0.1px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 65px;
+}
+
+/*Begin Session*/
+
+
+/*buttons*/
+
+.setup-button-container {
+    width: 697px;
+    height: 58px;
+    margin-left: auto;
+    margin-right: auto;
+/*    border: 1px solid black;*/
+}
+
+.pink-rect-button {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    width: 296px;
+    height: 57px;
+    background: #FF005A;
+    border-radius: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.pink-rect-button:hover {
+    background: #CB0249;
+}
+
+.pink-rect-button-timer {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    width: 320px;
+    height: 57px;
+    background: #FF005A;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.pink-rect-button-timer:hover {
+    background: #CB0249;
+}
+
+.btn-sep {
+    margin-right: 100px;
+}
+
+.btn-text {
+    font-family: "PremierLeague-Bold";
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 17px;
+}
+
+.btn-centered {
+    text-align: center;
+}
+
+
+/*buttons*/
+
+/*Progress areas*/
+.setup-progress {
+    width: 88px;
+    height: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+/*    border: 1px solid black;*/
+}
+
+.progress-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+}
+
+.progress-dot:not(:last-child) {
+    margin-right: 6px;
+}
+
+.dot-active {
+    background-color: #FF005A;
+}
+
+.dot-complete {
+    background-color: #37003C;
+}
+
+.dot-inactive {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 2px solid #37003C;
+}
+
+
+/*Progress area*/
+
+
+/*Main space styles*/
+
+
+/*Timer-Running Styles*/
+
+/*Teacher Views*/
+
+.timer-running-control-container {
+    width: 965px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+.timer-controls-only {
+    width: 320px;
+}
+
+.timer-number-container {
+    text-align: center;
+}
+.timer-running-container {
+    display: inline-block;
+    width: 320px;
+    vertical-align: top;
+    margin-top: 35px;
+    margin-right: 130px;
+}
+
+.timer-running-left {
+    display: inline-block;
+    width: 110px;
+    vertical-align: top;
+}
+
+.timer-running-right {
+    display: inline-block;
+    width: 110px;
+    vertical-align: top;
+}
+
+.timer-running-center {
+    display: inline-block;
+    width: 77px;
+    line-height: 0.7;
+}
+
+.timer-running-notes-container {
+    display: inline-block;
+}
+
+.timer-start-btn {
+    width: 120px;
+    height: 120px;
+    background-color: #00FF87;
+    border-radius: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.timer-start-btn:hover {
+    background-color: #03E97D;
+}
+
+.timer-stop-btn {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-color: #FF005A;
+    border-radius: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.timer-stop-btn:hover {
+    background-color: #CB0249;
+
+}
+
+.timer-pause-btn {
+    float: right;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-color: #05F0FF;
+    border-radius: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.timer-pause-btn:hover {
+    background-color: #00CBD8;
+}
+
+.timer-resume-btn {
+    float: right;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-color: #00FF87;
+    border-radius: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
+}
+
+.timer-resume-btn:hover {
+    background-color: #03E97D;
+}
+
+
+
+.timer-btn-txt {
+    text-align: center;
+    padding-top: 42px;
+    font-family: "PremierLeague-Bold";
+    font-size: 26px;
+    color: #37003C;
+    letter-spacing: 0.07px;
+}
+
+/*Teacher Views*/
+
+
+/*Pupil Views*/
+
+.stopwatch-area-sml {
+    display: inline-block;
+    width: 613px;
+    height: 100%;
+    border-right: 2px black solid;
+    background-image: url(../img/pupil-stopwatch-bg-sml.png);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+.stopwatch-area-full {
+    width: 100%;
+    height: 100%;
+    border-right: 2px black solid;
+    background-image: url(../img/pupil-stopwatch-bg-lrg.png);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+
+.stopwatch-container {
+    width: 457px;
+    height: 617px;
+    background-image: url(../img/pupil-stopwatch-illustration.png);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stopwatch-illus-title {
+    width: 316px;
+    font-family: "PremierLeague-Bold";
+    font-size: 35px;
+    color: #37003C;
+    letter-spacing: 0.08px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 322px;
+}
+
+.stopwatch-illus-timer {
+    width: 316px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "DS-Digital-Bold";
+    font-size: 110px;
+    color: #37003C;
+    letter-spacing: -4px;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.right-side-container {
+    display: inline-block;
+    width: 665px;
+    height: 100%;
+    float: right;
+    padding:0px;
+    vertical-align: top;
+/*    background-image: url(../img/pupil-notes-bg-lrg.png);*/
+}
+
+.media-area {
+    width: 100%;
+    height: 250px;
+    background-image: url(../img/media-area-waiting-to-start.png);
+}
+
+.sml-activity-notes-container {
+    width: 100%;
+    height: 470px;
+    background-image: url(../img/pupil-notes-bg-sml.png);
+}
+
+.lrg-activity-notes-container {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/pupil-notes-bg-lrg.png);
+}
+
+.activity-notes-title {
+    font-family: "PremierLeague-Bold";
+    font-size: 28px;
+    color: #FF005A;
+    letter-spacing: 0.07px;
+    padding-top: 16px;
+    padding-left: 22px;
+}
+
+.activity-notes-divider {
+    width: 610px;
+    height: 3px;
+    background-color: #FF005A;
+    margin-left: 22px;
+    margin-top: 10px;
+}
+
+.activity-notes-text {
+    width: 610px;
+    height: 360px;
+    margin-left: 22px;
+    margin-top: 20px;
+    font-family: "PremierLeague-Bold";
+    font-size: 22px;
+    color: #FFFFFF;
+    letter-spacing: 0.07px;
+    line-height: 1.6;
+    
+}
+
+.activity-notes-text-lrg {
+    width: 610px;
+    height: 600px;
+    margin-left: 22px;
+    margin-top: 20px;
+    font-family: "PremierLeague-Bold";
+    font-size: 22px;
+    color: #FFFFFF;
+    letter-spacing: 0.07px;
+    line-height: 1.6;
+    
+}
+
+/*Pupil Views*/
+
+
+
