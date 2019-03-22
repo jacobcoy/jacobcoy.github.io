@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Interactive</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/odometer-theme-default.css" rel="stylesheet" />
+</head>
+<body style="background-color: #2C3F7E;">
+    <div class="timeoutFrame animated bounceIn hidden">
+        <div class="centerendContainer">
+
+            <div id="timeoutTitle"><p data-contentpath="config.content.screens.timeoutScreen.title"></p></div>
+
+            <div id="timeoutCountdownCircle">
+                <div class="countdownText">
+                    <p class="verticalCentered"></p>
+                </div>
+            </div>
+
+            <div id="timeoutText">
+                <p data-contentpath="config.content.screens.timeoutScreen.prompt"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainContainer">
+        <video id="attractScreenVideo" class="bgvideo centered" autoplay loop muted poster="" data-videosource="config.content.screens.attractScreen.backgroundVideo"></video>
+        <video id="selected-location-background-video" class="bgvideo centered hidden" autoplay loop muted poster=""></video>
+
+        <div class="top-navigation-container hidden">
+            <div class="box active"><div class="box-icon box-select-site"></div><div class="centered textCentered" style="margin-left:8px">Select site</div></div>
+            <div class="bar number1" data-type="1"></div>
+            <div class="box"><div class="box-icon box-adjust-size"></div><div class="centered textCentered" style="margin-left:8px">Adjust size</div></div>
+            <div class="bar number2" data-type="2"></div>
+            <div class="box"><div class="box-icon box-choose-materials"></div><div class="centered textCentered" style="margin-left:15px">Choose materials</div></div>
+            <div class="bar number3" data-type="2"></div>
+            <div class="box"><div class="box-icon box-select-workforce"></div><div class="centered textCentered" style="margin-left:10px">Select workforce</div></div>
+        </div>
+
+        <div id="attract-screen" class="pageContainer" data-move2="introduction-screen" data-disabled="false">
+            <div class="horizontalCentered attract-title textCentered animated fadeIn">
+                <p class="title" data-contentpath="config.content.screens.attractScreen.title"></p>
+            </div>
+
+            <div class="horizontalCentered attract-button" data-audio="config.content.sounds.buttonClick">
+                <div class="animated fadeInDown">
+                    <div class="centered textCentered" data-contentpath="config.content.screens.attractScreen.buttonText"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="introduction-screen" class="pageContainer">
+            <div class="horizontalCentered introduction-title textCentered animated fadeIn">
+                <p class="title" data-contentpath="config.content.screens.introductionScreen.title"></p>
+            </div>
+
+            <div class="introduction-panel hidden">
+                <p class="dialog1" data-contentpath="config.content.screens.introductionScreen.dialog1"></p>
+                <p class="dialog2" data-contentpath="config.content.screens.introductionScreen.dialog2"></p>
+            </div>
+
+            <div class="pm-character larger hidden"></div>
+
+            <div class="introduction-button hidden">
+                <div class="animated fadeInDown">
+                    <div class="centered textCentered" data-contentpath="config.content.screens.introductionScreen.buttonText" data-move2="select-site-screen" data-audio="config.content.sounds.buttonClick"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="select-site-screen" class="pageContainer">
+            <div class="site-panel">
+                <p class="dialog bold" data-contentpath="config.content.screens.selectSiteScreen.dialog1"></p>
+                <p class="dialog2" data-contentpath="config.content.screens.selectSiteScreen.dialog2"></p>
+            </div>
+
+            <div class="map">
+                <div class="location-selection higher-ground-container" data-location="higher-ground" data-audio="config.content.sounds.buttonClick">
+                    <div class="location higher-ground"></div>
+                    <div class="location-label" data-contentpath="config.content.gameMatrix.higherGround.title"></div>
+                    <div class="line higher-ground-line"></div>
+                </div>
+
+                <div class="location-selection riverbank-container" data-location="riverbank" data-audio="config.content.sounds.buttonClick">
+                    <div class="location riverbank"></div>
+                    <div class="location-label" data-contentpath="config.content.gameMatrix.riverBank.title"></div>
+                    <div class="line riverbank-line"></div>
+                </div>
+
+                <div class="location-selection desert-container" data-location="desert" data-audio="config.content.sounds.buttonClick">
+                    <div class="location desert"></div>
+                    <div class="location-label" data-contentpath="config.content.gameMatrix.desert.title"></div>
+                    <div class="line desert-line"></div>
+                </div>
+            </div>
+
+            <div class="map-info">
+                <div class="map-info-container">
+                    <p class="title"></p>
+                    <p class="content"></p>
+                </div>
+            </div>
+
+            <div class="pm-character"></div>
+        </div>
+
+        <div id="select-site-popup-screen" class="pageContainer">
+            <div class="map-info">
+                <div class="map-info-container">
+                    <p class="title"></p>
+                    <p class="content"></p>
+                    <div class="back-button" data-move2="select-site-screen" data-audio="config.content.sounds.buttonClick">
+                        <div class="back-button-icon"></div>
+                        <div>
+                            <p class="dialog bold" data-contentpath="config.content.screens.selectSitePopupScreen.backButtonText"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button" data-move2="adjust-size-screen" data-audio="config.content.sounds.buttonClick">
+                    <p class="button-next textCentered verticalCentered" data-contentpath="config.content.common.selectButtonText"></p>
+                </div>
+            </div>
+
+            <div class="pm-character larger"></div>
+        </div>
+
+        <div id="adjust-size-screen" class="pageContainer">
+            <div class="site-panel large">
+                <p class="dialog bold" data-contentpath="config.content.screens.adjustSizeScreen.dialog1"></p><br>
+                <p class="dialog2" data-contentpath="config.content.screens.adjustSizeScreen.dialog2"></p>
+            </div>
+
+            <div class="pyramid"></div>
+
+            <div class="sliders-container">
+                <div class="width-container">
+                    <div class="name-label">
+                        <p class="dialog" data-contentpath="config.content.screens.adjustSizeScreen.width"></p>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" id="width" min="1" max="3" value="2" oninput="manageSliderHandle(this)" />
+                    </div>
+
+                    <!--<div class="slider-container">
+                        <div class="slider" data-type="width"></div>
+                        <div class="slider-handle" data-type="width" data-value="1"></div>
+                        <div class="slider-handle" data-type="width" data-value="2"></div>
+                        <div class="slider-handle" data-type="width" data-value="3"></div>
+                    </div>-->
+                </div>
+                <div class="height-container">
+                    <div class="name-label">
+                        <p class="dialog" data-contentpath="config.content.screens.adjustSizeScreen.height"></p>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" id="height" min="1" max="3" value="2" oninput="manageSliderHandle(this)" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="pm-character"></div>
+
+            <div class="button" data-move2="choose-materials-screen" data-audio="config.content.sounds.buttonClick">
+                <p class="button-next textCentered verticalCentered" data-contentpath="config.content.common.nextButtonText"></p>
+            </div>
+        </div>
+
+        <div id="choose-materials-screen" class="pageContainer">
+            <div class="site-panel large">
+                <p class="dialog" data-contentpath="config.content.screens.chooseMaterialsScreen.dialog1"></p>
+            </div>
+
+            <div class="pyramid"></div>
+
+            <div class="materials-container">
+                <table>
+                    <tr>
+                        <td data-type="limestone">
+                            <div class="material limestone" data-type="limestone"></div>
+                            <div class="material polished-limestone" data-type="limestone"></div>
+                        </td>
+                        <td data-type="granite">
+                            <div class="material limestone" data-type="granite"></div>
+                            <div class="material granite" data-type="granite"></div>
+                        </td>
+                        <td data-type="mudbricks">
+                            <div class="material mudbricks" data-type="mudbricks"></div>
+                            <div class="material limestone" data-type="mudbricks"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-type="limestone">
+                            <div class="material-label">
+                                <p class="textCentered" data-contentpath="config.content.screens.chooseMaterialsScreen.limestone.label"></p>
+                            </div>
+                        </td>
+                        <td data-type="granite">
+                            <div class="material-label">
+                                <p class="textCentered" data-contentpath="config.content.screens.chooseMaterialsScreen.granite.label"></p>
+                            </div>
+                        </td>
+                        <td data-type="mudbricks">
+                            <div class="material-label">
+                                <p class="textCentered" data-contentpath="config.content.screens.chooseMaterialsScreen.mudbricks.label"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="pm-character"></div>
+
+            <div class="button hidden" data-move2="select-workforce-screen" data-audio="config.content.sounds.buttonClick">
+                <p class="button-next textCentered verticalCentered" data-contentpath="config.content.common.nextButtonText"></p>
+            </div>
+        </div>
+
+        <div id="select-workforce-screen" class="pageContainer">
+            <div class="site-panel large">
+                <p class="dialog" data-contentpath="config.content.screens.selectWorkforceScreen.dialog1"></p>
+            </div>
+
+            <div class="pyramid"></div>
+            <div class="pyramid-workforce"></div>
+
+            <div class="workforce-container">
+                <table>
+                    <tr>
+                        <td data-type="small">
+                            <div class="workforce" data-type="small"></div>
+                        </td>
+                        <td data-type="medium">
+                            <div class="workforce" data-type="medium"></div>
+                        </td>
+                        <td data-type="large">
+                            <div class="workforce" data-type="large"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-type="small">
+                            <div class="workforce-label">
+                                <p class="textCentered" data-contentpath="config.content.screens.selectWorkforceScreen.small.label"></p>
+                            </div>
+                        </td>
+                        <td data-type="medium">
+                            <div class="workforce-label">
+                                <p class="textCentered" data-contentpath="config.content.screens.selectWorkforceScreen.medium.label"></p>
+                            </div>
+                        </td>
+                        <td data-type="large">
+                            <div class="workforce-label">
+                                <p class="textCentered" data-contentpath="config.content.screens.selectWorkforceScreen.large.label"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="pm-character"></div>
+
+            <div class="button hidden" data-move2="building-pyramid-screen" data-audio="config.content.sounds.buttonClick">
+                <p class="button-next textCentered verticalCentered" data-contentpath="config.content.screens.selectWorkforceScreen.buttonText"></p>
+            </div>
+        </div>
+
+        <div id="building-pyramid-screen" class="pageContainer" data-disabled="false">
+            <div class="calendar-container">
+                <div class="odometer js-odometer-1"></div>
+                <div class="years" data-contentpath="config.content.common.years"></div>
+            </div>
+
+            <div class="building-pyramid-title">
+                <p class="title textCentered" data-contentpath="config.content.screens.buildingPyramidScreen.title"></p>
+            </div>
+
+            <img class="building-cloud-animation" src="assets/cloud/cloud_00.png" />
+
+            <div class="pm-character larger"></div>
+        </div>
+
+        <div id="scenario-screen" class="pageContainer">
+            <div class="popup-container horizontalCentered">
+                <div class="popup"></div>
+                <div class="scene" data-type="riverbank"></div>
+                <div class="material" data-type="granite"></div>
+                <div class="text-container">
+                    <div class="title"></div>
+                    <div class="scenario"></div>
+                    <div class="question" data-contentpath="config.content.screens.scenarioScreen.question"></div>
+                </div>
+
+                <div class="options-container">
+                    <div class="option option1" data-type="1">
+                        <div class="icon"></div>
+                        <div class="text">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="option option2" data-type="2">
+                        <div class="icon"></div>
+                        <div class="text">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="option option3" data-type="3">
+                        <div class="icon"></div>
+                        <div class="text">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pm-character larger"></div>
+        </div>
+
+        <div id="final-pyramid-screen" class="pageContainer" data-disabled="false">
+            <div class="calendar-container">
+                <div class="odometer js-odometer-2"></div>
+                <div class="years" data-contentpath="config.content.common.years"></div>
+            </div>
+
+            <img class="building-cloud-animation" src="assets/cloud/cloud_00.png" />
+
+            <div class="final-pyramid hidden"></div>
+
+            <div class="final-pyramid-title">
+                <p class="title textCentered" data-contentpath="config.content.screens.finalScreen.title"></p>
+            </div>
+
+            <div class="pm-character larger"></div>
+        </div>
+
+        <div id="score-screen" class="pageContainer">
+            <div class="score-location">
+                <div class="final-pyramid"></div>
+            </div>
+
+            <div class="score-container">
+                <div class="title"></div>
+                <div class="description" data-contentpath="config.content.screens.scoreScreen.description"></div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="scorelabel">
+                                <p data-contentpath="config.content.screens.scoreScreen.label1"></p>
+                            </div>
+                        </td>
+                        <td class="td-spacer"></td>
+                        <td>
+                            <div class="scorelabel">
+                                <p data-contentpath="config.content.screens.scoreScreen.label2"></p>
+                            </div>
+                        </td>
+                        <td class="td-spacer"></td>
+                        <td>
+                            <div class="scorelabel">
+                                <p data-contentpath="config.content.screens.scoreScreen.label3"></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="scorecard scorecard1">
+                                <p class="score-result"></p>
+                                <p class="score-max">/ 10</p>
+                            </div>
+                        </td>
+                        <td class="td-spacer"></td>
+                        <td>
+                            <div class="scorecard scorecard2">
+                                <p class="score-result"></p>
+                                <p class="score-max">/ 10</p>
+                            </div>
+                        </td>
+                        <td class="td-spacer"></td>
+                        <td>
+                            <div class="scorecard scorecard3">
+                                <p class="score-result"></p>
+                                <p class="score-max">/ 10</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="scorelabel2">
+                                <p data-contentpath="config.content.screens.scoreScreen.scoreText1"></p>
+                            </div>
+                        </td>
+                        <td class="td-spacer"></td>
+                        <td>
+                            <div class="scorelabel2">
+                                <p data-contentpath="config.content.screens.scoreScreen.scoreText2"></p>
+                            </div>
+                        </td>
+                        <td class="td-spacer"></td>
+                        <td>
+                            <div class="scorelabel2">
+                                <p data-contentpath="config.content.screens.scoreScreen.scoreText3"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="button" data-move2="restart-application" data-audio="config.content.sounds.buttonClick">
+                <p class="button-next textCentered verticalCentered" data-contentpath="config.content.screens.scoreScreen.buttonText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/circle-progress.js"></script>
+    <script src="scripts/idle-timer.js"></script>
+    <script src="scripts/odometer.js"></script>
+    <script src="scripts/preloadjs.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            startInteractive();
+
+            preloadAssets();
+
+        });
+    </script>
+</body>
+</html>

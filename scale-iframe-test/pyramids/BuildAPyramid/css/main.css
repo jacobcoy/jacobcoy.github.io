@@ -1,0 +1,1453 @@
+﻿/* BEGIN Variables:
+
+    Example: @primary-color: #0060ae;
+*/
+/* COMMON: */
+/* Attract Screen */
+/* Introduction Screen */
+/* Select Site Screen */
+/* Select Site Popup Screen */
+/* Adjust Size Screen */
+/* Choose Materials Screen */
+/* Select Workforce Screen */
+/* Building Pyramid Screen */
+/* Scenario Screen */
+/* Final Pyramid Screen */
+/* Score Screen */
+/* Timeout */
+/*  END Variables: */
+/* BEGIN MIXINS */
+/* END MIXINS */
+/*  BEGIN Fonts: */
+@font-face {
+  font-family: FSAlbert;
+  src: url('../fonts/FSAlbert.ttf');
+}
+@font-face {
+  font-family: FSAlbertBold;
+  src: url('../fonts/FSAlbert-Bold.ttf');
+}
+/*  END Fonts: */
+/*  BEGIN Common Styles: */
+/* Disables text selection - Start */
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: moz-none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+/* Disables text selection - End */
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  overflow: hidden;
+  display: none;
+}
+/*Clean auto margins*/
+p,
+h1 {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0em;
+  -webkit-margin-end: 0em;
+}
+/* BEGIN: Helpers */
+.bold {
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+.centerendContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.centeredContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+/* END: Helpers */
+#mainContainer {
+  width: 1920px;
+  height: 1080px;
+  /*.generate-bg-image(@background-common-riverbank);*/
+}
+.pageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.verticalCentered {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.horizontalCentered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.textCentered {
+  width: 100%;
+  text-align: center;
+}
+.textLeft {
+  width: 100%;
+  text-align: left;
+}
+.btnTextVerticalFix {
+  padding-bottom: 6px;
+}
+.bgvideo {
+  position: fixed;
+}
+.site-panel {
+  background-image: url("../assets/common/site-panel.png");
+  width: 950px;
+  height: 330px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 10;
+}
+.site-panel p {
+  margin-left: 254px;
+  font-family: FSAlbert;
+  font-size: 27px;
+  color: #d3cac1;
+  max-width: 450px;
+}
+.site-panel p.dialog {
+  margin-top: 128px;
+}
+.site-panel.large {
+  background-image: url("../assets/common/panel.png");
+  width: 1920px;
+  height: 420px;
+}
+.site-panel.large p.dialog {
+  margin-top: 218px;
+}
+.pm-character {
+  background-image: url("../assets/common/pm-character.png");
+  width: 220px;
+  height: 280px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 20;
+}
+.pm-character.larger {
+  background-image: url("../assets/introduction/pm-larger.png");
+  width: 297px;
+  height: 350px;
+}
+.button {
+  background-image: url("../assets/common/button.png");
+  width: 200px;
+  height: 70px;
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 30;
+}
+.button .button-next {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 28px;
+  color: #312d3f;
+}
+#select-workforce-screen .button {
+  background-image: url("../assets/game/select-workforce/build-pyramid-button.png");
+  width: 226px;
+  height: 70px;
+  bottom: 18px;
+  right: 18px;
+}
+.pyramid {
+  background-image: url("../assets/game/adjust-size/w1h1.png");
+  width: 680px;
+  height: 460px;
+  position: fixed;
+  top: 155px;
+  left: 620px;
+}
+.pyramid[data-width='1'][data-height='1'] {
+  background-image: url("../assets/game/adjust-size/w1h1.png");
+}
+.pyramid[data-width='1'][data-height='1'][data-material='granite'] {
+  background-image: url("../assets/game/choose-materials/granite/w1h1.png");
+}
+.pyramid[data-width='1'][data-height='1'][data-material='limestone'] {
+  background-image: url("../assets/game/choose-materials/limestone/w1h1.png");
+}
+.pyramid[data-width='1'][data-height='1'][data-material='mudbricks'] {
+  background-image: url("../assets/game/choose-materials/mudbricks/w1h1.png");
+}
+#select-workforce-screen .pyramid[data-width='1'][data-height='1'][data-material='granite'] {
+  background-image: url("../assets/game/select-workforce/granite/w1h1.png");
+}
+#select-workforce-screen .pyramid[data-width='1'][data-height='1'][data-material='limestone'] {
+  background-image: url("../assets/game/select-workforce/limestone/w1h1.png");
+}
+#select-workforce-screen .pyramid[data-width='1'][data-height='1'][data-material='mudbricks'] {
+  background-image: url("../assets/game/select-workforce/mudbricks/w1h1.png");
+}
+.pyramid[data-width='1'][data-height='2'] {
+  background-image: url("../assets/game/adjust-size/w1h2.png");
+}
+.pyramid[data-width='1'][data-height='2'][data-material='granite'] {
+  background-image: url("../assets/game/choose-materials/granite/w1h2.png");
+}
+.pyramid[data-width='1'][data-height='2'][data-material='limestone'] {
+  background-image: url("../assets/game/choose-materials/limestone/w1h2.png");
+}
+.pyramid[data-width='1'][data-height='2'][data-material='mudbricks'] {
+  background-image: url("../assets/game/choose-materials/mudbricks/w1h2.png");
+}
+#select-workforce-screen .pyramid[data-width='1'][data-height='2'][data-material='granite'] {
+  background-image: url("../assets/game/select-workforce/granite/w1h2.png");
+}
+#select-workforce-screen .pyramid[data-width='1'][data-height='2'][data-material='limestone'] {
+  background-image: url("../assets/game/select-workforce/limestone/w1h2.png");
+}
+#select-workforce-screen .pyramid[data-width='1'][data-height='2'][data-material='mudbricks'] {
+  background-image: url("../assets/game/select-workforce/mudbricks/w1h2.png");
+}
+.pyramid[data-width='1'][data-height='3'] {
+  background-image: url("../assets/game/adjust-size/w1h3.png");
+}
+.pyramid[data-width='1'][data-height='3'][data-material='granite'] {
+  background-image: url("../assets/game/choose-materials/granite/w1h3.png");
+}
+.pyramid[data-width='1'][data-height='3'][data-material='limestone'] {
+  background-image: url("../assets/game/choose-materials/limestone/w1h3.png");
+}
+.pyramid[data-width='1'][data-height='3'][data-material='mudbricks'] {
+  background-image: url("../assets/game/choose-materials/mudbricks/w1h3.png");
+}
+#select-workforce-screen .pyramid[data-width='1'][data-height='3'][data-material='granite'] {
+  background-image: url("../assets/game/select-workforce/granite/w1h3.png");
+}
+#select-workforce-screen .pyramid[data-width='1'][data-height='3'][data-material='limestone'] {
+  background-image: url("../assets/game/select-workforce/limestone/w1h3.png");
+}
+#select-workforce-screen .pyramid[data-width='1'][data-height='3'][data-material='mudbricks'] {
+  background-image: url("../assets/game/select-workforce/mudbricks/w1h3.png");
+}
+.pyramid[data-width='2'][data-height='1'] {
+  background-image: url("../assets/game/adjust-size/w2h1.png");
+}
+.pyramid[data-width='2'][data-height='1'][data-material='granite'] {
+  background-image: url("../assets/game/choose-materials/granite/w2h1.png");
+}
+.pyramid[data-width='2'][data-height='1'][data-material='limestone'] {
+  background-image: url("../assets/game/choose-materials/limestone/w2h1.png");
+}
+.pyramid[data-width='2'][data-height='1'][data-material='mudbricks'] {
+  background-image: url("../assets/game/choose-materials/mudbricks/w2h1.png");
+}
+#select-workforce-screen .pyramid[data-width='2'][data-height='1'][data-material='granite'] {
+  background-image: url("../assets/game/select-workforce/granite/w2h1.png");
+}
+#select-workforce-screen .pyramid[data-width='2'][data-height='1'][data-material='limestone'] {
+  background-image: url("../assets/game/select-workforce/limestone/w2h1.png");
+}
+#select-workforce-screen .pyramid[data-width='2'][data-height='1'][data-material='mudbricks'] {
+  background-image: url("../assets/game/select-workforce/mudbricks/w2h1.png");
+}
+.pyramid[data-width='2'][data-height='2'] {
+  background-image: url("../assets/game/adjust-size/w2h2.png");
+}
+.pyramid[data-width='2'][data-height='2'][data-material='granite'] {
+  background-image: url("../assets/game/choose-materials/granite/w2h2.png");
+}
+.pyramid[data-width='2'][data-height='2'][data-material='limestone'] {
+  background-image: url("../assets/game/choose-materials/limestone/w2h2.png");
+}
+.pyramid[data-width='2'][data-height='2'][data-material='mudbricks'] {
+  background-image: url("../assets/game/choose-materials/mudbricks/w2h2.png");
+}
+#select-workforce-screen .pyramid[data-width='2'][data-height='2'][data-material='granite'] {
+  background-image: url("../assets/game/select-workforce/granite/w2h2.png");
+}
+#select-workforce-screen .pyramid[data-width='2'][data-height='2'][data-material='limestone'] {
+  background-image: url("../assets/game/select-workforce/limestone/w2h2.png");
+}
+#select-workforce-screen .pyramid[data-width='2'][data-height='2'][data-material='mudbricks'] {
+  background-image: url("../assets/game/select-workforce/mudbricks/w2h2.png");
+}
+.pyramid[data-width='2'][data-height='3'] {
+  background-image: url("../assets/game/adjust-size/w2h3.png");
+}
+.pyramid[data-width='2'][data-height='3'][data-material='granite'] {
+  background-image: url("../assets/game/choose-materials/granite/w2h3.png");
+}
+.pyramid[data-width='2'][data-height='3'][data-material='limestone'] {
+  background-image: url("../assets/game/choose-materials/limestone/w2h3.png");
+}
+.pyramid[data-width='2'][data-height='3'][data-material='mudbricks'] {
+  background-image: url("../assets/game/choose-materials/mudbricks/w2h3.png");
+}
+#select-workforce-screen .pyramid[data-width='2'][data-height='3'][data-material='granite'] {
+  background-image: url("../assets/game/select-workforce/granite/w2h3.png");
+}
+#select-workforce-screen .pyramid[data-width='2'][data-height='3'][data-material='limestone'] {
+  background-image: url("../assets/game/select-workforce/limestone/w2h3.png");
+}
+#select-workforce-screen .pyramid[data-width='2'][data-height='3'][data-material='mudbricks'] {
+  background-image: url("../assets/game/select-workforce/mudbricks/w2h3.png");
+}
+.pyramid[data-width='3'][data-height='1'] {
+  background-image: url("../assets/game/adjust-size/w3h1.png");
+}
+.pyramid[data-width='3'][data-height='1'][data-material='granite'] {
+  background-image: url("../assets/game/choose-materials/granite/w3h1.png");
+}
+.pyramid[data-width='3'][data-height='1'][data-material='limestone'] {
+  background-image: url("../assets/game/choose-materials/limestone/w3h1.png");
+}
+.pyramid[data-width='3'][data-height='1'][data-material='mudbricks'] {
+  background-image: url("../assets/game/choose-materials/mudbricks/w3h1.png");
+}
+#select-workforce-screen .pyramid[data-width='3'][data-height='1'][data-material='granite'] {
+  background-image: url("../assets/game/select-workforce/granite/w3h1.png");
+}
+#select-workforce-screen .pyramid[data-width='3'][data-height='1'][data-material='limestone'] {
+  background-image: url("../assets/game/select-workforce/limestone/w3h1.png");
+}
+#select-workforce-screen .pyramid[data-width='3'][data-height='1'][data-material='mudbricks'] {
+  background-image: url("../assets/game/select-workforce/mudbricks/w3h1.png");
+}
+.pyramid[data-width='3'][data-height='2'] {
+  background-image: url("../assets/game/adjust-size/w3h2.png");
+}
+.pyramid[data-width='3'][data-height='2'][data-material='granite'] {
+  background-image: url("../assets/game/choose-materials/granite/w3h2.png");
+}
+.pyramid[data-width='3'][data-height='2'][data-material='limestone'] {
+  background-image: url("../assets/game/choose-materials/limestone/w3h2.png");
+}
+.pyramid[data-width='3'][data-height='2'][data-material='mudbricks'] {
+  background-image: url("../assets/game/choose-materials/mudbricks/w3h2.png");
+}
+#select-workforce-screen .pyramid[data-width='3'][data-height='2'][data-material='granite'] {
+  background-image: url("../assets/game/select-workforce/granite/w3h2.png");
+}
+#select-workforce-screen .pyramid[data-width='3'][data-height='2'][data-material='limestone'] {
+  background-image: url("../assets/game/select-workforce/limestone/w3h2.png");
+}
+#select-workforce-screen .pyramid[data-width='3'][data-height='2'][data-material='mudbricks'] {
+  background-image: url("../assets/game/select-workforce/mudbricks/w3h2.png");
+}
+.pyramid[data-width='3'][data-height='3'] {
+  background-image: url("../assets/game/adjust-size/w3h3.png");
+}
+.pyramid[data-width='3'][data-height='3'][data-material='granite'] {
+  background-image: url("../assets/game/choose-materials/granite/w3h3.png");
+}
+.pyramid[data-width='3'][data-height='3'][data-material='limestone'] {
+  background-image: url("../assets/game/choose-materials/limestone/w3h3.png");
+}
+.pyramid[data-width='3'][data-height='3'][data-material='mudbricks'] {
+  background-image: url("../assets/game/choose-materials/mudbricks/w3h3.png");
+}
+#select-workforce-screen .pyramid[data-width='3'][data-height='3'][data-material='granite'] {
+  background-image: url("../assets/game/select-workforce/granite/w3h3.png");
+}
+#select-workforce-screen .pyramid[data-width='3'][data-height='3'][data-material='limestone'] {
+  background-image: url("../assets/game/select-workforce/limestone/w3h3.png");
+}
+#select-workforce-screen .pyramid[data-width='3'][data-height='3'][data-material='mudbricks'] {
+  background-image: url("../assets/game/select-workforce/mudbricks/w3h3.png");
+}
+.top-navigation-container {
+  width: 1135px;
+  height: 94px;
+  position: relative;
+  top: 26px;
+  /*background-color: purple;
+    opacity: 0.4;*/
+  margin: 0 auto;
+}
+.top-navigation-container .box {
+  position: relative;
+  background-image: url('../assets/common/progress-nar/inactive-box.png');
+  width: 270px;
+  height: 94px;
+  z-index: 2;
+  float: left;
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  margin-right: 10px;
+}
+.top-navigation-container .box.completed {
+  background-image: url('../assets/common/progress-nar/completed-box.png');
+  width: 270px;
+  height: 94px;
+}
+.top-navigation-container .box.completed .box-icon {
+  background-image: url('../assets/common/navigation/tick.png');
+  width: 23px;
+  height: 28px;
+}
+.top-navigation-container .box.active {
+  background-image: url('../assets/common/progress-nar/active-box.png');
+  width: 270px;
+  height: 94px;
+  color: #312d3f;
+}
+.top-navigation-container .box.active .box-select-site {
+  background-image: url('../assets/common/navigation/site-active.png');
+  width: 23px;
+  height: 28px;
+}
+.top-navigation-container .box.active .box-adjust-size {
+  background-image: url('../assets/common/navigation/scale-active.png');
+  width: 23px;
+  height: 28px;
+}
+.top-navigation-container .box.active .box-choose-materials {
+  background-image: url('../assets/common/navigation/materials-active.png');
+  width: 23px;
+  height: 28px;
+}
+.top-navigation-container .box.active .box-select-workforce {
+  background-image: url('../assets/common/navigation/workforce-active.png');
+  width: 23px;
+  height: 28px;
+}
+.top-navigation-container .box .box-select-site {
+  background-image: url('../assets/common/navigation/site-inactive.png');
+  width: 23px;
+  height: 28px;
+  margin-top: 31px;
+  margin-left: 40px;
+}
+.top-navigation-container .box .box-adjust-size {
+  background-image: url('../assets/common/navigation/scale-inactive.png');
+  width: 23px;
+  height: 28px;
+  margin-top: 31px;
+  margin-left: 40px;
+}
+.top-navigation-container .box .box-choose-materials {
+  background-image: url('../assets/common/navigation/materials-inactive.png');
+  width: 23px;
+  height: 28px;
+  margin-top: 31px;
+  margin-left: 40px;
+}
+.top-navigation-container .box .box-select-workforce {
+  background-image: url('../assets/common/navigation/workforce-inactive.png');
+  width: 23px;
+  height: 28px;
+  margin-top: 31px;
+  margin-left: 40px;
+}
+.top-navigation-container .bar {
+  position: absolute;
+  background-image: url('../assets/common/progress-nar/bar1.png');
+  width: 70px;
+  height: 94px;
+  z-index: 1;
+  float: left;
+  margin-left: 241px;
+}
+.top-navigation-container .bar[data-type='2'] {
+  background-image: url('../assets/common/progress-nar/bar2.png');
+  width: 70px;
+  height: 94px;
+}
+.top-navigation-container .bar[data-type='3'] {
+  background-image: url('../assets/common/progress-nar/bar3.png');
+  width: 70px;
+  height: 94px;
+}
+.top-navigation-container .bar.number1 {
+  margin-left: 241px;
+}
+.top-navigation-container .bar.number2 {
+  margin-left: 519px;
+}
+.top-navigation-container .bar.number3 {
+  margin-left: 797px;
+}
+.calendar-container {
+  background-image: url("../assets/building-pyramid/calendar.png");
+  width: 220px;
+  height: 160px;
+  position: fixed;
+  top: 34px;
+  left: 44px;
+}
+.building-cloud-animation {
+  position: fixed;
+  top: 100px;
+  left: 560px;
+  width: 800px;
+  height: 700px;
+  display: block;
+}
+.years {
+  font-family: FSAlbert;
+  font-size: 34px;
+  color: #fff;
+  margin-top: 22px;
+  text-align: center;
+}
+/* END: COMMON */
+/* BEGIN: ATTRACT SCREEN */
+#attract-screen .attract-title {
+  background-image: url("../assets/attract/title-graphic.png");
+  width: 808px;
+  height: 162px;
+  margin-top: 114px;
+  position: relative;
+}
+#attract-screen .attract-title p {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 76px;
+  color: #1d1f6e;
+  padding-top: 35px;
+}
+#attract-screen .attract-button {
+  background-image: url("../assets/attract/attract-button.png");
+  width: 574px;
+  height: 112px;
+  position: fixed;
+  bottom: 65px;
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 44px;
+  color: #fff;
+}
+#attract-screen .attract-button .textCentered {
+  margin-top: 56px;
+}
+/* END: ATTRACT SCREEN */
+/* BEGIN: INTRODUCTION SCREEN */
+#introduction-screen .introduction-title {
+  background-image: url("../assets/introduction/welcome-title-graphic.png");
+  width: 714px;
+  height: 136px;
+  margin-top: 54px;
+  position: relative;
+}
+#introduction-screen .introduction-title p {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 42px;
+  color: #1d1f6e;
+  padding-top: 43px;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+#introduction-screen .introduction-panel {
+  background-image: url("../assets/introduction/intro-panel.png");
+  width: 1150px;
+  height: 400px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+#introduction-screen .introduction-panel p {
+  margin-left: 327px;
+  font-family: FSAlbert;
+  font-size: 27.5px;
+  color: #d3cac1;
+  max-width: 490px;
+}
+#introduction-screen .introduction-panel p.dialog1 {
+  font-weight: bold;
+  margin-top: 116px;
+}
+#introduction-screen .introduction-panel p.dialog2 {
+  margin-top: 34px;
+}
+#introduction-screen .introduction-button {
+  background-image: url("../assets/introduction/start-button.png");
+  width: 248px;
+  height: 88px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 36px;
+  color: #ffde87;
+}
+#introduction-screen .introduction-button .textCentered {
+  margin-top: 44px;
+}
+/* END: INTRODUCTION SCREEN */
+/* BEGIN: SELECT SITE SCREEN */
+#select-site-screen .map {
+  background-image: url("../assets/game/select-site/map.png");
+  width: 1362px;
+  height: 746px;
+  position: fixed;
+  top: 196px;
+  left: 280px;
+}
+#select-site-screen .location-selection {
+  position: absolute;
+}
+#select-site-screen .location-selection.active {
+  background-image: url("../assets/game/select-site/selection-glow.png");
+  background-repeat: no-repeat;
+  background-position-x: -18px;
+  background-position-y: -20px;
+}
+#select-site-screen .line {
+  position: relative;
+}
+#select-site-screen .location-label {
+  position: absolute;
+  margin: 0 auto;
+  width: 204px;
+  text-align: center;
+  padding-top: 10px;
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 28px;
+  color: #161754;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+}
+#select-site-screen .location-label.active {
+  -webkit-text-stroke: 2px rgba(251, 173, 73, 0.6);
+}
+#select-site-screen .higher-ground-container {
+  top: 497px;
+  right: 195px;
+}
+#select-site-screen .higher-ground-container .higher-ground {
+  background-image: url("../assets/game/select-site/higher-ground.png");
+  width: 204px;
+  height: 104px;
+}
+#select-site-screen .higher-ground-container .higher-ground.active {
+  background-image: url("../assets/game/select-site/higher-ground-active.png");
+  width: 204px;
+  height: 104px;
+}
+#select-site-screen .higher-ground-container .higher-ground-line {
+  background-image: url("../assets/game/select-site/higher-ground-line.png");
+  width: 264px;
+  height: 168px;
+  top: -265px;
+  left: -258px;
+}
+#select-site-screen .higher-ground-container .higher-ground-line.active {
+  background-image: url("../assets/game/select-site/higher-ground-line-active.png");
+  width: 264px;
+  height: 168px;
+}
+#select-site-screen .riverbank-container {
+  top: 220px;
+  right: 215px;
+}
+#select-site-screen .riverbank-container .riverbank {
+  background-image: url("../assets/game/select-site/riverbank.png");
+  width: 204px;
+  height: 104px;
+}
+#select-site-screen .riverbank-container .riverbank.active {
+  background-image: url("../assets/game/select-site/riverbank-active.png");
+  width: 204px;
+  height: 104px;
+}
+#select-site-screen .riverbank-container .riverbank-line {
+  background-image: url("../assets/game/select-site/riverbank-line.png");
+  width: 239px;
+  height: 64px;
+  top: -52px;
+  left: -237px;
+}
+#select-site-screen .riverbank-container .riverbank-line.active {
+  background-image: url("../assets/game/select-site/riverbank-line-active.png");
+  width: 239px;
+  height: 64px;
+}
+#select-site-screen .desert-container {
+  margin-top: 316px;
+  margin-left: 206px;
+}
+#select-site-screen .desert-container .desert {
+  background-image: url("../assets/game/select-site/desert.png");
+  width: 204px;
+  height: 104px;
+}
+#select-site-screen .desert-container .desert.active {
+  background-image: url("../assets/game/select-site/desert-active.png");
+  width: 204px;
+  height: 104px;
+}
+#select-site-screen .desert-container .desert-line {
+  background-image: url("../assets/game/select-site/desert-line.png");
+  width: 212px;
+  height: 57px;
+  left: 201px;
+  top: -106px;
+}
+#select-site-screen .desert-container .desert-line.active {
+  background-image: url("../assets/game/select-site/desert-line-active.png");
+  width: 212px;
+  height: 57px;
+}
+/* END: SELECT SITE SCREEN */
+/* BEGIN: SELECT SITE POPUP SCREEN */
+#select-site-popup-screen .map-info {
+  position: fixed;
+  top: 185px;
+  left: 278px;
+}
+#select-site-popup-screen .map-info[data-type='higher-ground'] {
+  background-image: url("../assets/game/select-site/map-higher-ground.png");
+  width: 1364px;
+  height: 746px;
+}
+#select-site-popup-screen .map-info[data-type='riverbank'] {
+  background-image: url("../assets/game/select-site/map-riverbank.png");
+  width: 1364px;
+  height: 746px;
+}
+#select-site-popup-screen .map-info[data-type='desert'] {
+  background-image: url("../assets/game/select-site/map-desert.png");
+  width: 1364px;
+  height: 746px;
+}
+#select-site-popup-screen .map-info .map-info-container {
+  margin-top: 270px;
+  margin-left: 140px;
+}
+#select-site-popup-screen .map-info .map-info-container .title {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 56px;
+  color: #1d1f6e;
+}
+#select-site-popup-screen .map-info .map-info-container .content {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 28px;
+  color: #312d3f;
+  max-width: 420px;
+  margin-top: 26px;
+  margin-bottom: 158px;
+}
+#select-site-popup-screen .map-info .map-info-container .back-button {
+  width: 230px;
+  height: 48px;
+  border-radius: 10px;
+  border: solid;
+  border-width: 2px;
+  color: #1d1f6e;
+}
+#select-site-popup-screen .map-info .map-info-container .back-button .back-button-icon {
+  background-image: url("../assets/game/select-site/back-icon.png");
+  width: 15px;
+  height: 25px;
+  float: left;
+  padding-right: 38px;
+  padding-top: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#select-site-popup-screen .map-info .map-info-container .back-button p {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 27px;
+  color: #1d1f6e;
+  padding-top: 11px;
+}
+#select-site-popup-screen .button {
+  position: absolute;
+  bottom: 42px;
+  right: 138px;
+}
+/* END: SELECT SITE POPUP SCREEN */
+/* BEGIN: ADJUST SIZE SCREEN */
+#adjust-size-screen .sliders-container {
+  position: fixed;
+  bottom: 0;
+  left: 824px;
+  z-index: 30;
+}
+#adjust-size-screen .sliders-container .slider-container {
+  float: left;
+}
+#adjust-size-screen .sliders-container .width-container {
+  margin-bottom: 46px;
+}
+#adjust-size-screen .sliders-container .height-container {
+  margin-bottom: 108px;
+}
+#adjust-size-screen .name-label {
+  background-image: url("../assets/game/adjust-size/name-label.png");
+  width: 126px;
+  height: 50px;
+}
+#adjust-size-screen .name-label p {
+  font-family: FSAlbert;
+  font-size: 27px;
+  color: #d3cac1;
+  padding-top: 11px;
+  text-align: center;
+}
+#adjust-size-screen .slider-container {
+  background-image: url("../assets/game/adjust-size/slider.png");
+  width: 695px;
+  height: 20px;
+  margin-left: 159px;
+  margin-top: -32px;
+}
+#adjust-size-screen .slider-handle {
+  float: left;
+  margin-top: -41px;
+  z-index: 30;
+  width: 42px;
+  height: 42px;
+}
+#adjust-size-screen .slider-handle.active {
+  background-image: url("../assets/game/adjust-size/slider-handle.png");
+  width: 42px;
+  height: 42px;
+}
+#adjust-size-screen .slider-handle[data-value="1"] {
+  margin-left: 255px;
+}
+#adjust-size-screen .slider-handle[data-value="2"] {
+  margin-left: 185px;
+}
+#adjust-size-screen .slider-handle[data-value="3"] {
+  margin-left: 185px;
+}
+#adjust-size-screen input[type=range] {
+  margin-left: 100px;
+  width: 495px;
+  background: transparent;
+  -webkit-appearance: none;
+  top: -10px;
+  position: relative;
+  /*
+  */
+}
+#adjust-size-screen input[type=range]:focus {
+  outline: none;
+}
+#adjust-size-screen input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  background-image: url("../assets/game/adjust-size/slider-handle.png");
+  width: 42px;
+  height: 42px;
+}
+/* END: ADJUST SIZE SCREEN */
+/* BEGIN: CHOOSE MATERIALS SCREEN */
+#choose-materials-screen .materials-container {
+  position: fixed;
+  bottom: 60px;
+  right: 170px;
+  z-index: 30;
+}
+#choose-materials-screen .material {
+  display: inline-block;
+}
+#choose-materials-screen .material.notselected {
+  opacity: 0.3;
+}
+#choose-materials-screen .material + .material {
+  padding-left: 14px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#choose-materials-screen .material.granite {
+  background-image: url("../assets/game/choose-materials/granite.png");
+  width: 110px;
+  height: 106px;
+  background-position: center;
+}
+#choose-materials-screen .material.granite.selected {
+  background-image: url("../assets/game/choose-materials/selected-material.png"), url("../assets/game/choose-materials/granite.png");
+  width: 110px;
+  height: 106px;
+}
+#choose-materials-screen .material.limestone {
+  background-image: url("../assets/game/choose-materials/limestone.png");
+  width: 110px;
+  height: 106px;
+  background-position: center;
+}
+#choose-materials-screen .material.limestone.selected {
+  background-image: url("../assets/game/choose-materials/selected-material.png"), url("../assets/game/choose-materials/limestone.png");
+  width: 110px;
+  height: 106px;
+}
+#choose-materials-screen .material.mudbricks {
+  background-image: url("../assets/game/choose-materials/mudbricks.png");
+  width: 110px;
+  height: 106px;
+  background-position: center;
+}
+#choose-materials-screen .material.mudbricks.selected {
+  background-image: url("../assets/game/choose-materials/selected-material.png"), url("../assets/game/choose-materials/mudbricks.png");
+  width: 110px;
+  height: 106px;
+}
+#choose-materials-screen .material.polished-limestone {
+  background-image: url("../assets/game/choose-materials/polished-limestone.png");
+  width: 110px;
+  height: 106px;
+  background-position: center;
+}
+#choose-materials-screen .material.polished-limestone.selected {
+  background-image: url("../assets/game/choose-materials/selected-material.png"), url("../assets/game/choose-materials/polished-limestone.png");
+  width: 110px;
+  height: 106px;
+}
+#choose-materials-screen td {
+  padding-right: 56px;
+}
+#choose-materials-screen .material-label {
+  background-image: url("../assets/game/choose-materials/material-label.png");
+  width: 220px;
+  height: 90px;
+  margin-top: 20px;
+}
+#choose-materials-screen .material-label.selected {
+  background-image: url("../assets/game/choose-materials/material-label-selected.png");
+  width: 220px;
+  height: 90px;
+}
+#choose-materials-screen .material-label p {
+  font-family: FSAlbert;
+  font-size: 23px;
+  color: #f8e3c0;
+  text-shadow: 1px 2px 2px rgba(150, 150, 150, 0.6);
+  max-width: 220px;
+  padding-top: 22px;
+}
+#choose-materials-screen .material-label p.notselected {
+  opacity: 0.3;
+}
+/* END: CHOOSE MATERIALS SCREEN */
+/* BEGIN: SELECT WORKFORCE SCREEN */
+#select-workforce-screen .pyramid-workforce {
+  position: fixed;
+  top: 464px;
+  left: 540px;
+  z-index: 50;
+}
+#select-workforce-screen .pyramid-workforce[data-type='small'] {
+  background-image: url("../assets/game/select-workforce/workers-small.png");
+  width: 820px;
+  height: 220px;
+}
+#select-workforce-screen .pyramid-workforce[data-type='medium'] {
+  background-image: url("../assets/game/select-workforce/workers-medium.png");
+  width: 820px;
+  height: 220px;
+}
+#select-workforce-screen .pyramid-workforce[data-type='large'] {
+  background-image: url("../assets/game/select-workforce/workers-large.png");
+  width: 820px;
+  height: 220px;
+}
+#select-workforce-screen .workforce-container {
+  position: fixed;
+  bottom: 60px;
+  right: 232px;
+  z-index: 30;
+}
+#select-workforce-screen .workforce {
+  display: inline-block;
+}
+#select-workforce-screen .workforce.notselected {
+  opacity: 0.3;
+}
+#select-workforce-screen .workforce + .workforce {
+  padding-left: 14px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#select-workforce-screen .workforce[data-type='small'] {
+  background-image: url("../assets/game/select-workforce/small-workforce.png");
+  width: 280px;
+  height: 110px;
+  background-position: center;
+}
+#select-workforce-screen .workforce[data-type='small'].selected {
+  background-image: url("../assets/game/select-workforce/small-workforce-selected.png");
+  width: 280px;
+  height: 110px;
+}
+#select-workforce-screen .workforce[data-type='medium'] {
+  background-image: url("../assets/game/select-workforce/medium-workforce.png");
+  width: 280px;
+  height: 110px;
+  background-position: center;
+}
+#select-workforce-screen .workforce[data-type='medium'].selected {
+  background-image: url("../assets/game/select-workforce/medium-workforce-selected.png");
+  width: 280px;
+  height: 110px;
+}
+#select-workforce-screen .workforce[data-type='large'] {
+  background-image: url("../assets/game/select-workforce/large-workforce.png");
+  width: 280px;
+  height: 110px;
+  background-position: center;
+}
+#select-workforce-screen .workforce[data-type='large'].selected {
+  background-image: url("../assets/game/select-workforce/large-workforce-selected.png");
+  width: 280px;
+  height: 110px;
+}
+#select-workforce-screen td {
+  padding-right: 8px;
+}
+#select-workforce-screen .workforce-label {
+  background-image: url("../assets/game/choose-materials/material-label.png");
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 20px;
+}
+#select-workforce-screen .workforce-label.selected {
+  background-image: url("../assets/game/choose-materials/material-label-selected.png");
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#select-workforce-screen .workforce-label p {
+  font-family: FSAlbert;
+  font-size: 26px;
+  color: #f8e3c0;
+  text-shadow: 1px 2px 2px rgba(150, 150, 150, 0.6);
+  padding-top: 14px;
+  max-width: 160px;
+  margin: 0 auto;
+}
+#select-workforce-screen .workforce-label p.notselected {
+  opacity: 0.3;
+}
+/* END: SELECT WORKFORCE SCREEN */
+/* BEGIN: BUILDING PYRAMID SCREEN */
+@keyframes cloud1 {
+  100% {
+    background-position-y: -21000px;
+  }
+}
+@keyframes cloud2 {
+  100% {
+    background-position-y: -42000px;
+  }
+  0% {
+    background-position-y: 0px;
+  }
+}
+#building-pyramid-screen .building-pyramid-title {
+  background-image: url("../assets/building-pyramid/choose-location-outer.png");
+  width: 635px;
+  height: 126px;
+  position: fixed;
+  left: 642.5px;
+  bottom: 102px;
+}
+#building-pyramid-screen .building-pyramid-title .title {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 42px;
+  color: #1d1f6e;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 38px;
+}
+/* END: BUILDING PYRAMID SCREEN */
+/* BEGIN: SCENARIO SCREEN */
+#scenario-screen .popup {
+  background-image: url("../assets/scenario/popup-window.png");
+  width: 1260px;
+  height: 910px;
+  margin-top: 85px;
+}
+#scenario-screen .option {
+  background-image: url("../assets/scenario/scenario-option.png");
+  width: 340px;
+  height: 152px;
+}
+#scenario-screen .icon {
+  margin-top: 39px;
+  margin-left: 27px;
+  margin-right: 14px;
+  float: left;
+}
+#scenario-screen .icon[data-type='pray'] {
+  background-image: url("../assets/scenario/icon-pray.png");
+  width: 50px;
+  height: 66px;
+}
+#scenario-screen .icon[data-type='time'] {
+  background-image: url("../assets/scenario/icon-time.png");
+  width: 50px;
+  height: 66px;
+}
+#scenario-screen .icon[data-type='work-on'] {
+  background-image: url("../assets/scenario/icon-work-on.png");
+  width: 50px;
+  height: 66px;
+}
+#scenario-screen .material {
+  position: absolute;
+  top: 337px;
+  right: 76px;
+}
+#scenario-screen .material[data-type='granite'] {
+  background-image: url("../assets/scenario/pyramid-granite.png");
+  width: 310px;
+  height: 248px;
+}
+#scenario-screen .material[data-type='limestone'] {
+  background-image: url("../assets/scenario/pyramid-limestone.png");
+  width: 310px;
+  height: 248px;
+}
+#scenario-screen .material[data-type='mudbricks'] {
+  background-image: url("../assets/scenario/pyramid-mudbricks.png");
+  width: 310px;
+  height: 248px;
+}
+#scenario-screen .scene {
+  position: absolute;
+  top: 94px;
+  right: 7px;
+}
+#scenario-screen .scene[data-type='higher-ground'] {
+  background-image: url("../assets/scenario/scene-higher-ground.png");
+  width: 568px;
+  height: 625px;
+}
+#scenario-screen .scene[data-type='riverbank'] {
+  background-image: url("../assets/scenario/scene-riverbank.png");
+  width: 568px;
+  height: 625px;
+}
+#scenario-screen .scene[data-type='desert'] {
+  background-image: url("../assets/scenario/scene-desert.png");
+  width: 568px;
+  height: 625px;
+}
+#scenario-screen .text-container {
+  position: absolute;
+  margin-top: 216px;
+  max-width: 550px;
+  top: 0;
+  margin-left: 108px;
+}
+#scenario-screen .text-container .title {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 80px;
+  color: #fdad49;
+}
+#scenario-screen .text-container .scenario {
+  font-family: FSAlbert;
+  font-size: 36px;
+  color: #f8e3c0;
+  margin-top: 68px;
+  margin-bottom: 60px;
+}
+#scenario-screen .text-container .question {
+  font-family: FSAlbert;
+  font-size: 36px;
+  color: #f8e3c0;
+}
+#scenario-screen .options-container .option {
+  background-image: url("../assets/scenario/scenario-option.png");
+  width: 340px;
+  height: 152px;
+  position: fixed;
+  bottom: 46px;
+}
+#scenario-screen .options-container .option.option1 {
+  left: 80px;
+}
+#scenario-screen .options-container .option.option2 {
+  left: 465px;
+}
+#scenario-screen .options-container .option.option3 {
+  left: 850px;
+}
+#scenario-screen .options-container .option p {
+  font-family: FSAlbert;
+  font-size: 30px;
+  color: #312d3f;
+  margin-top: 39px;
+  max-width: 330px;
+}
+/* END: SCENARIO SCREEN */
+/* BEGIN: FINAL PYRAMID SCREEN */
+.final-pyramid {
+  background-image: url("../assets/final-pyramid/bent-pyramid-granite.png");
+  width: 650px;
+  height: 750px;
+  position: fixed;
+  top: 200px;
+  right: 300px;
+}
+.final-pyramid[data-result='bent'][data-material='granite'] {
+  background-image: url("../assets/final-pyramid/bent-pyramid-granite.png");
+}
+.final-pyramid[data-result='bent'][data-material='limestone'] {
+  background-image: url("../assets/final-pyramid/bent-pyramid-limestone.png");
+}
+.final-pyramid[data-result='bent'][data-material='mudbricks'] {
+  background-image: url("../assets/final-pyramid/bent-pyramid-mud.png");
+}
+.final-pyramid[data-result='finished'][data-material='granite'] {
+  background-image: url("../assets/final-pyramid/finished-pyramid-granite.png");
+}
+.final-pyramid[data-result='finished'][data-material='limestone'] {
+  background-image: url("../assets/final-pyramid/finished-pyramid-limestone.png");
+}
+.final-pyramid[data-result='finished'][data-material='mudbricks'] {
+  background-image: url("../assets/final-pyramid/finished-pyramid-mud.png");
+}
+.final-pyramid[data-result='half'][data-material='granite'] {
+  background-image: url("../assets/final-pyramid/half-pyramid-granite.png");
+}
+.final-pyramid[data-result='half'][data-material='limestone'] {
+  background-image: url("../assets/final-pyramid/half-pyramid-limestone.png");
+}
+.final-pyramid[data-result='half'][data-material='mudbricks'] {
+  background-image: url("../assets/final-pyramid/half-pyramid-mud.png");
+}
+.final-pyramid[data-result='rubble'][data-material='granite'] {
+  background-image: url("../assets/final-pyramid/rubble-pyramid-granite.png");
+}
+.final-pyramid[data-result='rubble'][data-material='limestone'] {
+  background-image: url("../assets/final-pyramid/rubble-pyramid-limestone.png");
+}
+.final-pyramid[data-result='rubble'][data-material='mudbricks'] {
+  background-image: url("../assets/final-pyramid/rubble-pyramid-mud.png");
+}
+#final-pyramid-screen .final-pyramid-title {
+  background-image: url("../assets/building-pyramid/choose-location-outer.png");
+  width: 635px;
+  height: 126px;
+  position: fixed;
+  left: 642.5px;
+  bottom: 102px;
+}
+#final-pyramid-screen .final-pyramid-title .title {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 42px;
+  color: #1d1f6e;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 38px;
+}
+/* END: FINAL PYRAMID SCREEN */
+/* BEGIN: SCORE SCREEN */
+#score-screen {
+  background-image: url("../assets/score/background.jpg");
+  width: 1920px;
+  height: 1080px;
+}
+#score-screen .score-location {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+#score-screen .score-location[data-type='desert'] {
+  background-image: url("../assets/score/score-desert.png");
+  width: 837px;
+  height: 1080px;
+}
+#score-screen .score-location[data-type='riverbank'] {
+  background-image: url("../assets/score/score-riverbank.png");
+  width: 837px;
+  height: 1080px;
+}
+#score-screen .score-location[data-type='higher-ground'] {
+  background-image: url("../assets/score/score-higher-ground.png");
+  width: 837px;
+  height: 1080px;
+}
+#score-screen .title {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 80px;
+  color: #fdad49;
+  padding-top: 136px;
+  padding-left: 80px;
+}
+#score-screen .description {
+  font-family: FSAlbert;
+  font-size: 36px;
+  color: #f8e3c0;
+  padding-top: 50px;
+  padding-left: 80px;
+}
+#score-screen .score-text {
+  font-family: FSAlbert;
+  font-size: 36px;
+  color: #f8e3c0;
+  padding-top: 116px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+#score-screen table {
+  padding-left: 80px;
+  position: fixed;
+  bottom: 128px;
+}
+#score-screen td {
+  margin: 0 auto;
+  width: 280px;
+}
+#score-screen td.td-spacer {
+  width: 80px;
+}
+#score-screen .scorecard {
+  background-image: url("../assets/score/scorecard.png");
+  width: 236px;
+  height: 300px;
+  margin: 0 auto;
+}
+#score-screen .scorecard p {
+  font-family: FSAlbert;
+  font-weight: bold;
+  color: #1d1f6e;
+}
+#score-screen .scorecard p.score-result {
+  text-align: center;
+  font-size: 150px;
+  padding-top: 61px;
+}
+#score-screen .scorecard p.score-max {
+  font-size: 36px;
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+#score-screen .scorelabel {
+  margin: 0 auto 28px;
+}
+#score-screen .scorelabel p {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 32px;
+  color: #fdad49;
+  text-align: center;
+  padding-top: 26px;
+}
+#score-screen .scorelabel2 {
+  background-image: url("../assets/score/score-label.png");
+  width: 280px;
+  height: 70px;
+  margin: 44px auto 0;
+}
+#score-screen .scorelabel2 p {
+  font-family: FSAlbert;
+  font-weight: bold;
+  font-size: 27px;
+  color: #f8e3c0;
+  text-align: center;
+  padding-top: 21px;
+}
+#score-screen .button {
+  bottom: 18px;
+  right: 18px;
+}
+#score-screen .final-pyramid {
+  width: 520px;
+  height: 576px;
+  background-size: cover;
+  right: 110px;
+  top: 265px;
+}
+/* END: SCORE SCREEN */
+/* BEGIN: TIMEOUT */
+.timeoutFrame {
+  background-image: url('../assets/common/timeout.png');
+  background-size: cover;
+  position: fixed;
+  z-index: 200;
+  width: 1920px;
+  height: 1080px;
+}
+.timeoutFrame #timeoutCountdownCircle {
+  position: relative;
+  margin: auto;
+  top: 322px;
+  width: 400px;
+  height: 400px;
+}
+.timeoutFrame #timeoutCountdownCircle .countdownText {
+  position: absolute;
+  top: 10px;
+  text-align: center;
+}
+.timeoutFrame #timeoutCountdownCircle .countdownText p {
+  margin: 0px;
+  position: relative;
+  font-family: FSAlbert;
+  color: #fff;
+}
+.timeoutFrame #timeoutText {
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+  text-align: center;
+}
+.timeoutFrame #timeoutText p {
+  font-family: FSAlbert;
+  font-size: 40px;
+  font-weight: 300;
+  color: #fff;
+}
+.timeoutFrame #timeoutTitle {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  text-align: center;
+}
+.timeoutFrame #timeoutTitle p {
+  font-family: FSAlbert;
+  font-weight: 300;
+  font-size: 70px;
+  color: #fff;
+}
+/* END: TIMEOUT */
