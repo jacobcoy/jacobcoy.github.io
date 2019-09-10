@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>send feedback to slack</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+        Enter feedback here
+        <input type="text" name="message" id="message">
+        <button onclick="sendToSlack()">
+            Send feedback to Slack
+        </button>
+<script>
+    function sendToSlack() {
+        var settings = {
+            url: "https://hooks.slack.com/services/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",
+            method: "POST",
+            dataType: "application/x-www-form-urlencoded",
+            data: {
+                "payload": JSON.stringify({text: $("#message").val()})
+            }
+        }
+        
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+    }
+    
+</script>
+</body>
+</html>
