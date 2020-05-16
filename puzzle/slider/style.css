@@ -256,7 +256,7 @@ body{
   font-family: 'Spartan', sans-serif;
   font-weight: 500;
   font-size:16px;
-  width:120px;
+  width:90px;
   text-align:center;
   padding:15px 0;
   background: rgba(255,255,255,0.6);
@@ -269,7 +269,10 @@ body{
 #jade:checked ~ *[for="jade"],
 #richard:checked ~ *[for="richard"],
 #tracy:checked ~ *[for="tracy"],
-#kev:checked ~ *[for="kev"]{
+#kev:checked ~ *[for="kev"],
+#shirley:checked ~ *[for="shirley"],
+#dave:checked ~ *[for="dave"],
+#jacob:checked ~ *[for="jacob"]{
   border-color:#EC6F66; background:rgba(255,255,255,0.8); font-weight: 700;
 }
 #amber:checked ~ * [class^=peice]::after{
@@ -287,6 +290,15 @@ body{
 #kev:checked ~ * [class^=peice]::after{
   background-image:url(img/k2.jpg);
 }
+#shirley:checked ~ * [class^=peice]::after{
+  background-image:url(img/s1.jpg);
+}
+#dave:checked ~ * [class^=peice]::after{
+  background-image:url(img/d1.jpg);
+}
+#jacob:checked ~ * [class^=peice]::after{
+  background-image:url(img/jc1.jpg);
+}
 
 h1 {
     font-family: 'Spartan', sans-serif;
@@ -301,7 +313,7 @@ h1 {
 
 @media only screen and (max-width: 448px) {
     .selectBG{
-  width:100px;
+  width:70px;
 }
 }
 
