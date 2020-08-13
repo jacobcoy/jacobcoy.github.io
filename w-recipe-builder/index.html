@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Slot Machine in Javascript</title>
+<meta name="description" content="Welcome to the Javascript version of Slot Machine written by Saurabh Odhyan">
+<link href="https://jacobcoy.com/wdx-fonts/waitrose-axure-ff/stylesheet.css" rel="stylesheet">
+<meta name="keywords" content="javascript, jquery, spritely, animation, sprite, background position, slot, game, games, saurabh, odhyan">
+<style>
+body {
+	font-family: 'Gill Sans Nova for JL', sans-serif;
+    font-weight: 300;
+	padding:20px;
+    background-color: #144734;
+}
+    
+.title {
+    font-family: 'Gill Sans Nova for JL', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 10px;
+    color: #C4D601;
+    }
+    
+.bd {
+	text-align:center;
+}
+.container {
+	margin:0 auto;
+	width:266px;
+}
+.slot-wrapper {
+	 border: 1px solid #144734;
+}
+.slot {
+	background:url("images/reel_normal.jpg") repeat-y; 
+	width:86px;
+	height:70px;
+	float:left;
+	border:1px solid #144734;
+	background-position:0 4px;
+    
+}
+.motion {
+	background:url("images/reel_normal.jpg") repeat-y;
+}
+button {
+	display:block;
+	width:180px;
+	height:50px;
+	margin-left: auto;
+    margin-right: auto;
+	font-size:16px;
+	cursor:pointer;
+    font-family: 'Gill Sans Nova for JL', sans-serif;
+    font-weight: 500;
+    color: white;
+    background-color: #144734;
+    border-style: solid;
+    border-color: white;
+}
+    
+    button:disabled {
+        opacity: 0.25;
+    }
+#result {
+	margin:20px 0;
+	font-size:22px;
+	height:22px;
+    color: #C4D601;
+}
+.clear {
+	clear:both;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="jquery.spritely.js"></script>
+<script src="jquery.backgroundPosition.js"></script>
+<script src="slot.js"></script>
+</head>
+
+<body>
+<div class="hd">
+</div>
+<div class="bd">
+	<p class="title">Lucky dip recipe builder</p>
+	<div class="container">
+		<div class="slot-wrapper">
+			<div id="slot1" class="slot"></div>
+			<div id="slot2" class="slot"></div>
+			<div id="slot3" class="slot"></div>
+			<div class="clear"></div>
+		</div>
+		<div id="result"></div>
+		<div><button id="control">Pick my items</button></div>
+	</div>
+</div>
+</body>
+</html>
